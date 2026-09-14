@@ -1,0 +1,1459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Imrana Haruna Abdullah | IT & Digital Professional</title>
+<link rel="icon" href="Title logo.png">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+<style>
+  :root {
+    --gold: #C9A84C;
+    --gold-light: #E8C96A;
+    --dark: #0A0A0F;
+    --dark2: #111118;
+    --dark3: #18181F;
+    --dark4: #22222C;
+    --text: #E8E8F0;
+    --text-muted: #8888A0;
+    --accent: #C9A84C;
+    --navy: #1A1A35;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--dark);
+    color: var(--text);
+    line-height: 1.7;
+    overflow-x: hidden;
+  }
+
+  /* NOISE TEXTURE OVERLAY */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 9999;
+    opacity: 0.4;
+  }
+
+  /* NAV */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.2rem 4rem;
+    background: rgba(10,10,15,0.85);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(201,168,76,0.15);
+  }
+
+  .nav-logo {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+  }
+
+  /* ============================================================
+   * COMPANY LOGO — Nav Bar
+   * Replace the src below with your logo image path or URL.
+   * Recommended: PNG with transparent background, height ~40px.
+   * Example: src="./logo.png" or src="https://yourdomain.com/logo.png"
+   * ============================================================ */
+  .nav-logo img {
+    height: 40px;
+    width: auto;
+    object-fit: contain;
+  }
+
+  /* Fallback text shown only if image fails to load */
+  .nav-logo-fallback {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4rem;
+    font-weight: 900;
+    color: var(--gold);
+    letter-spacing: 0.05em;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 2.5rem;
+    list-style: none;
+  }
+
+  .nav-links a {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.75rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+
+  .nav-links a:hover { color: var(--gold); }
+
+  /* HERO */
+  #hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 8rem 4rem 4rem;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero-bg {
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse 60% 60% at 80% 50%, rgba(201,168,76,0.08) 0%, transparent 70%),
+      radial-gradient(ellipse 40% 40% at 20% 80%, rgba(26,26,53,0.6) 0%, transparent 70%),
+      linear-gradient(135deg, #0A0A0F 0%, #0F0F1A 100%);
+  }
+
+  .hero-grid {
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(201,168,76,0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(201,168,76,0.04) 1px, transparent 1px);
+    background-size: 60px 60px;
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 900px;
+  }
+
+  .hero-tag {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.72rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+  }
+
+  .hero-tag::before {
+    content: '';
+    display: inline-block;
+    width: 30px;
+    height: 1px;
+    background: var(--gold);
+  }
+
+  h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(3rem, 7vw, 6rem);
+    font-weight: 900;
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    margin-bottom: 1.5rem;
+  }
+
+  h1 span { color: var(--gold); }
+
+  .hero-desc {
+    font-size: 1.15rem;
+    color: var(--text-muted);
+    max-width: 580px;
+    margin-bottom: 3rem;
+    font-weight: 300;
+  }
+
+  .hero-ctas {
+    display: flex;
+    gap: 1.2rem;
+    flex-wrap: wrap;
+  }
+
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.95rem 2.2rem;
+    background: var(--gold);
+    color: var(--dark);
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 600;
+    font-size: 0.9rem;
+    letter-spacing: 0.05em;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s;
+    clip-path: polygon(0 0, calc(100% - 12px) 0, 100% 12px, 100% 100%, 12px 100%, 0 calc(100% - 12px));
+  }
+
+  .btn-primary:hover {
+    background: var(--gold-light);
+    transform: translateY(-2px);
+    box-shadow: 0 12px 40px rgba(201,168,76,0.35);
+  }
+
+  .btn-outline {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.95rem 2.2rem;
+    background: transparent;
+    color: var(--gold);
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 600;
+    font-size: 0.9rem;
+    letter-spacing: 0.05em;
+    text-decoration: none;
+    border: 1px solid rgba(201,168,76,0.5);
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+
+  .btn-outline:hover {
+    background: rgba(201,168,76,0.1);
+    border-color: var(--gold);
+  }
+
+  .hero-stats {
+    position: absolute;
+    right: 4rem;
+    bottom: 4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    z-index: 2;
+  }
+
+  .stat {
+    text-align: right;
+  }
+
+  .stat-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--gold);
+    line-height: 1;
+  }
+
+  .stat-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.65rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+  }
+
+  /* SECTIONS */
+  section {
+    padding: 7rem 4rem;
+  }
+
+  .section-header {
+    margin-bottom: 4rem;
+  }
+
+  .section-num {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.72rem;
+    letter-spacing: 0.2em;
+    color: var(--gold);
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .section-num::after {
+    content: '';
+    display: inline-block;
+    width: 40px;
+    height: 1px;
+    background: var(--gold);
+  }
+
+  h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2rem, 4vw, 3.2rem);
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+  }
+
+  h2 span { color: var(--gold); }
+
+  /* ABOUT */
+  #about {
+    background: var(--dark2);
+    position: relative;
+  }
+
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .about-text p {
+    color: var(--text-muted);
+    margin-bottom: 1.2rem;
+    font-size: 1.05rem;
+  }
+
+  .about-text p strong { color: var(--text); font-weight: 500; }
+
+  .skills-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+
+  .skill-tag {
+    padding: 0.6rem 1rem;
+    background: var(--dark3);
+    border: 1px solid rgba(201,168,76,0.2);
+    font-family: 'DM Mono', monospace;
+    font-size: 0.72rem;
+    letter-spacing: 0.1em;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    transition: all 0.3s;
+  }
+
+  .skill-tag:hover {
+    border-color: var(--gold);
+    color: var(--gold);
+    background: rgba(201,168,76,0.05);
+  }
+
+  .about-highlights {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .highlight-card {
+    padding: 1.8rem;
+    background: var(--dark3);
+    border-left: 3px solid var(--gold);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .highlight-card::before {
+    content: '';
+    position: absolute;
+    top: 0; right: 0;
+    width: 60px; height: 60px;
+    background: radial-gradient(circle at top right, rgba(201,168,76,0.1), transparent);
+  }
+
+  .highlight-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem;
+    margin-bottom: 0.4rem;
+    color: var(--gold);
+  }
+
+  .highlight-card p {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+  }
+
+  /* SERVICES */
+  #services {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 7rem 4rem;
+  }
+
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+
+  .service-card {
+    padding: 2.5rem;
+    background: var(--dark2);
+    border: 1px solid rgba(201,168,76,0.1);
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s;
+    cursor: default;
+  }
+
+  .service-card::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 2px;
+    background: var(--gold);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s;
+  }
+
+  .service-card:hover {
+    border-color: rgba(201,168,76,0.4);
+    transform: translateY(-4px);
+    box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+  }
+
+  .service-card:hover::after { transform: scaleX(1); }
+
+  .service-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .service-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3rem;
+    margin-bottom: 0.8rem;
+    color: var(--text);
+  }
+
+  .service-card p {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+  }
+
+  .service-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+
+  .service-list li {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.72rem;
+    letter-spacing: 0.05em;
+    color: var(--text-muted);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .service-list li::before {
+    content: '▸';
+    color: var(--gold);
+    font-size: 0.6rem;
+  }
+
+  /* PORTFOLIO */
+  #portfolio {
+    background: var(--dark2);
+    padding: 7rem 4rem;
+  }
+
+  .portfolio-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+
+  .project-card {
+    background: var(--dark3);
+    border: 1px solid rgba(201,168,76,0.1);
+    overflow: hidden;
+    transition: all 0.4s;
+  }
+
+  .project-card:hover {
+    border-color: rgba(201,168,76,0.4);
+    transform: translateY(-4px);
+    box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+  }
+
+  .project-img {
+    height: 180px;
+    background: linear-gradient(135deg, var(--dark4), var(--navy));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 4rem;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .project-img::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(201,168,76,0.05), transparent);
+  }
+
+  .project-body {
+    padding: 2rem;
+  }
+
+  .project-tag {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.65rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 0.6rem;
+  }
+
+  .project-body h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2rem;
+    margin-bottom: 0.6rem;
+  }
+
+  .project-body p {
+    font-size: 0.88rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+  }
+
+  /* EXPERIENCE */
+  #experience {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 7rem 4rem;
+  }
+
+  .timeline {
+    position: relative;
+    padding-left: 2.5rem;
+  }
+
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0; bottom: 0;
+    width: 1px;
+    background: linear-gradient(to bottom, var(--gold), rgba(201,168,76,0.1));
+  }
+
+  .timeline-item {
+    position: relative;
+    margin-bottom: 3rem;
+    padding-bottom: 3rem;
+    border-bottom: 1px solid rgba(201,168,76,0.08);
+  }
+
+  .timeline-item:last-child { border-bottom: none; margin-bottom: 0; }
+
+  .timeline-dot {
+    position: absolute;
+    left: -2.5rem;
+    top: 0.3rem;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--gold);
+    transform: translateX(-4.5px);
+    box-shadow: 0 0 20px rgba(201,168,76,0.5);
+  }
+
+  .timeline-date {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.7rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 0.5rem;
+  }
+
+  .timeline-item h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3rem;
+    margin-bottom: 0.2rem;
+  }
+
+  .timeline-item .org {
+    font-size: 0.88rem;
+    color: var(--text-muted);
+    margin-bottom: 1rem;
+  }
+
+  .timeline-item ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+
+  .timeline-item ul li {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    display: flex;
+    align-items: flex-start;
+    gap: 0.6rem;
+  }
+
+  .timeline-item ul li::before {
+    content: '▸';
+    color: var(--gold);
+    font-size: 0.65rem;
+    flex-shrink: 0;
+    margin-top: 0.3rem;
+  }
+
+  /* CONTACT */
+  #contact {
+    background: var(--dark2);
+    padding: 7rem 4rem;
+  }
+
+  .contact-inner {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    align-items: start;
+  }
+
+  .contact-info h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    color: var(--gold);
+  }
+
+  .contact-info p {
+    color: var(--text-muted);
+    margin-bottom: 2rem;
+    font-size: 0.95rem;
+  }
+
+  .contact-items {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .contact-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 1.2rem;
+    background: var(--dark3);
+    border: 1px solid rgba(201,168,76,0.1);
+    text-decoration: none;
+    color: var(--text);
+    transition: all 0.3s;
+  }
+
+  .contact-item:hover {
+    border-color: var(--gold);
+    background: rgba(201,168,76,0.05);
+    transform: translateX(4px);
+  }
+
+  .contact-item-icon {
+    font-size: 1.3rem;
+    flex-shrink: 0;
+  }
+
+  .contact-item-text {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .contact-item-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.65rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+  }
+
+  .contact-item-value {
+    font-size: 0.9rem;
+    color: var(--text);
+    font-weight: 500;
+  }
+
+  /* WA BUTTON */
+  .wa-button {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    padding: 1.1rem 2rem;
+    background: #25D366;
+    color: #fff;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-decoration: none;
+    margin-top: 1.5rem;
+    transition: all 0.3s;
+    clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 10px 100%, 0 calc(100% - 10px));
+  }
+
+  .wa-button:hover {
+    background: #20BF5C;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(37,211,102,0.4);
+  }
+
+  .wa-icon {
+    width: 22px;
+    height: 22px;
+    fill: white;
+  }
+
+  /* TERMS MODAL */
+  .modal-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.85);
+    z-index: 10000;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(8px);
+  }
+
+  .modal-overlay.active { display: flex; }
+
+  .modal {
+    background: var(--dark2);
+    border: 1px solid rgba(201,168,76,0.3);
+    max-width: 720px;
+    width: 90%;
+    max-height: 85vh;
+    overflow-y: auto;
+    position: relative;
+    padding: 3rem;
+  }
+
+  .modal::-webkit-scrollbar { width: 4px; }
+  .modal::-webkit-scrollbar-thumb { background: var(--gold); }
+
+  .modal-close {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    background: none;
+    border: 1px solid rgba(201,168,76,0.3);
+    color: var(--gold);
+    width: 36px;
+    height: 36px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+  }
+
+  .modal-close:hover { background: rgba(201,168,76,0.1); }
+
+  .modal h2 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .modal-date {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.7rem;
+    letter-spacing: 0.1em;
+    color: var(--text-muted);
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+  }
+
+  .modal h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1rem;
+    color: var(--gold);
+    margin-top: 1.8rem;
+    margin-bottom: 0.6rem;
+  }
+
+  .modal p, .modal li {
+    font-size: 0.88rem;
+    color: var(--text-muted);
+    line-height: 1.8;
+  }
+
+  .modal ul {
+    padding-left: 1.5rem;
+    margin-top: 0.5rem;
+  }
+
+  .modal li { margin-bottom: 0.3rem; }
+
+  .modal-divider {
+    height: 1px;
+    background: rgba(201,168,76,0.15);
+    margin: 1.5rem 0;
+  }
+
+  /* FOOTER */
+  footer {
+    background: var(--dark);
+    padding: 3rem 4rem;
+    border-top: 1px solid rgba(201,168,76,0.1);
+  }
+
+  .footer-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .footer-logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2rem;
+    color: var(--gold);
+    font-weight: 700;
+  }
+
+  .footer-copy {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.68rem;
+    letter-spacing: 0.1em;
+    color: var(--text-muted);
+    text-transform: uppercase;
+  }
+
+  .footer-tc {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.68rem;
+    letter-spacing: 0.1em;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    background: none;
+    border: none;
+    cursor: pointer;
+    text-decoration: underline;
+    transition: color 0.2s;
+  }
+
+  .footer-tc:hover { color: var(--gold); }
+
+  /* SCROLL ANIMATIONS */
+  .fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+
+  .fade-in.visible {
+    opacity: 1;
+    transform: none;
+  }
+
+  /* HAMBURGER */
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    padding: 4px;
+  }
+
+  .hamburger span {
+    width: 24px;
+    height: 2px;
+    background: var(--gold);
+    transition: all 0.3s;
+  }
+
+  @media (max-width: 900px) {
+    nav { padding: 1rem 1.5rem; }
+    .nav-links { display: none; }
+    .hamburger { display: flex; }
+
+    #hero { padding: 7rem 1.5rem 4rem; }
+    .hero-stats { display: none; }
+
+    section { padding: 5rem 1.5rem; }
+    #services, #experience { padding: 5rem 1.5rem; }
+    #portfolio { padding: 5rem 1.5rem; }
+    #contact { padding: 5rem 1.5rem; }
+
+    .about-grid { grid-template-columns: 1fr; gap: 3rem; }
+    .services-grid { grid-template-columns: 1fr; }
+    .projects-grid { grid-template-columns: 1fr; }
+    .contact-grid { grid-template-columns: 1fr; gap: 3rem; }
+
+    .footer-inner { flex-direction: column; gap: 1rem; text-align: center; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <!-- ============================================================
+       COMPANY LOGO — Replace src with your actual logo image path.
+       E.g.: src="./logo.png"  or  src="https://yourdomain.com/logo.png"
+       ============================================================ -->
+  <a href="#hero" class="nav-logo">
+    <img src="vtech-ng-logo.svg" alt="Imrana Haruna Abdullah Logo" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"/>
+    <span class="nav-logo-fallback" style="display:none;">IHA</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#portfolio">Portfolio</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <div class="hamburger" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-grid"></div>
+  <div class="hero-content">
+    <!-- PROFILE PHOTO + NAME ROW -->
+    <div style="display:flex;align-items:center;gap:2rem;margin-bottom:1.5rem;flex-wrap:wrap;">
+      <!-- ============================================================
+           PROFILE PHOTO TEMPLATE
+           Replace src below with your actual photo path or URL.
+           Recommended: square image, at least 200x200px.
+           Example: src="./my-photo.jpg"
+           ============================================================ -->
+      <div style="flex-shrink:0;width:110px;height:110px;border-radius:50%;border:2px solid var(--gold);box-shadow:0 0 30px rgba(201,168,76,0.3);overflow:hidden;background:var(--dark3);display:flex;align-items:center;justify-content:center;">
+        <img src="Upwork profile pic.jfif" alt="Imrana Haruna Abdullah"
+          style="width:100%;height:100%;object-fit:cover;"
+          onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
+        <span style="display:none;font-size:2.5rem;align-items:center;justify-content:center;width:100%;height:100%;">👤</span>
+      </div>
+      <div class="hero-tag" style="margin-bottom:0;">Chief IT Officer · Digital Strategist · Developer · freelancer</div>
+    </div>
+    <h1>Imrana Haruna<br><span>Abdullah</span></h1>
+    <p class="hero-desc">Transforming businesses through technology. Web development, IT infrastructure, social media strategy, and digital security — built with precision from Kano, Nigeria.</p>
+    <div class="hero-ctas">
+      <a href="#contact" class="btn-primary">
+        <span>Hire Me</span>
+        <span>→</span>
+      </a>
+      <a href="#portfolio" class="btn-outline">
+        <span>View Work</span>
+      </a>
+    </div>
+  </div>
+  <div class="hero-stats">
+    <div class="stat">
+      <div class="stat-num">3+</div>
+      <div class="stat-label">Organisations Served</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">5+</div>
+      <div class="stat-label">Years Experience</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">∞</div>
+      <div class="stat-label">Dedication</div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="about-grid" style="max-width:1200px;margin:0 auto;">
+    <div class="about-text fade-in">
+      <div class="section-header">
+        <div class="section-num">01</div>
+        <h2>About <span>Me</span></h2>
+      </div>
+      <p>I am a <strong>multi-disciplinary IT professional</strong> based in Kano, Nigeria, with hands-on expertise spanning web development, IT management, and digital marketing. I currently serve as <strong>Chief IT Officer</strong> at both NIGTAN LIMITED and Afrah Plastics Limited.</p>
+      <p>Beyond the corporate world, I collaborate with the <strong>NSCDC Kano State Command</strong>, contributing to gender-focused civic initiatives. I am also finalising a university degree (graduating December 2026), continuously merging academic insight with real-world impact.</p>
+      <p>I leverage cutting-edge AI tools and modern technologies to deliver <strong>expert-level results</strong> that others typically outsource to entire teams — efficiently and independently.</p>
+      <div class="skills-grid">
+        <div class="skill-tag">Web Development</div>
+        <div class="skill-tag">IT Management</div>
+        <div class="skill-tag">Social Media Strategy</div>
+        <div class="skill-tag">Python Programming</div>
+        <div class="skill-tag">Digital Marketing</div>
+        <div class="skill-tag">Data Management & Data Entry</div>
+        <div class="skill-tag">SQL</div>
+        <div class="skill-tag">Document Automation</div>
+      </div>
+    </div>
+    <div class="about-highlights fade-in">
+      <div class="highlight-card">
+        <h3>🏢 NIGTAN LIMITED</h3>
+        <p>IT & Social Media Campaign Manager. Maintaining the full corporate website and digital presence.</p>
+      </div>
+      <div class="highlight-card">
+        <h3>🏭 Afrah Plastics Limited</h3>
+        <p>Chief IT Officer & Social Media Campaign Manager. Designed and deployed the corporate website from scratch.</p>
+      </div>
+      <div class="highlight-card">
+        <h3>🛡️ NSCDC Kano State Command</h3>
+        <p>Office of Suprintendant, Gender-based Violence — Handles all graphics design requests for the Command's official communications and campaigns.</p>
+      </div>
+      <div class="highlight-card">
+        <h3>🎓 University Student</h3>
+        <p>Expected graduation December 2026. Bridging academic knowledge with practical, real-world IT and digital expertise.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+  <div style="max-width:1200px;margin:0 auto;">
+  <div class="section-header fade-in">
+    <div class="section-num">02</div>
+    <h2>What I <span>Do</span></h2>
+  </div>
+  <div class="services-grid">
+
+    <div class="service-card fade-in">
+      <div class="service-icon">💻</div>
+      <h3>Web Development</h3>
+      <p>Professional corporate websites built from concept to launch — fast, responsive, and tailored to your brand identity.</p>
+      <ul class="service-list">
+        <li>Corporate website design & development</li>
+        <li>Landing pages & microsites</li>
+        <li>Website maintenance & updates</li>
+        <li>Performance optimisation</li>
+        <li>Mobile-responsive layouts</li>
+      </ul>
+    </div>
+
+    <div class="service-card fade-in">
+      <div class="service-icon">📱</div>
+      <h3>Social Media Management</h3>
+      <p>Strategic social media campaigns that grow audiences, build brand authority, and convert followers into customers.</p>
+      <ul class="service-list">
+        <li>Campaign strategy & planning</li>
+        <li>Content creation & scheduling</li>
+        <li>Brand voice development</li>
+        <li>Analytics & performance reporting</li>
+        <li>Multi-platform management</li>
+      </ul>
+    </div>
+
+    <div class="service-card fade-in">
+      <div class="service-icon">🖥️</div>
+      <h3>IT Management</h3>
+      <p>End-to-end IT oversight for organisations — ensuring smooth operations, security, and infrastructure reliability.</p>
+      <ul class="service-list">
+        <li>IT infrastructure setup & management</li>
+        <li>Systems administration</li>
+        <li>Technical support & troubleshooting</li>
+        <li>Software deployment</li>
+        <li>IT policy & documentation</li>
+      </ul>
+    </div>
+
+    <div class="service-card fade-in">
+      <div class="service-icon">📄</div>
+      <h3>Document & Presentation Design</h3>
+      <p>Professional Word documents, reports, CVs, and PowerPoint presentations crafted to impress stakeholders.</p>
+      <ul class="service-list">
+        <li>Corporate reports & proposals</li>
+        <li>Executive presentations (PPTX)</li>
+        <li>Professional CVs & portfolios</li>
+        <li>Business letters & memos</li>
+        <li>Formatting & typesetting</li>
+      </ul>
+    </div>
+
+    <div class="service-card fade-in">
+      <div class="service-icon">🎨</div>
+      <h3>Digital Branding & Graphics</h3>
+      <p>Visual identity and digital assets that make your organisation stand out — from logos to social media graphics.</p>
+      <ul class="service-list">
+        <li>Brand identity design</li>
+        <li>Social media graphics</li>
+        <li>Holiday & event creatives</li>
+        <li>Email banners & headers</li>
+        <li>Digital flyers & posters</li>
+      </ul>
+    </div>
+
+    <div class="service-card fade-in">
+      <div class="service-icon">🏫</div>
+      <h3>School Support Services</h3>
+      <p>Dedicated digital and document support for educational institutions — printing, formatting, and digital assistance.</p>
+      <ul class="service-list">
+        <li>Academic document formatting</li>
+        <li>School website setup</li>
+        <li>Digital records management</li>
+        <li>Printing & production support</li>
+        <li>Student & staff IT assistance</li>
+      </ul>
+    </div>
+
+  </div>
+  </div>
+</section>
+
+<!-- PORTFOLIO -->
+<section id="portfolio">
+  <div class="portfolio-inner">
+    <div class="section-header fade-in">
+      <div class="section-num">03</div>
+      <h2>Selected <span>Work</span></h2>
+    </div>
+    <div class="projects-grid">
+
+      <div class="project-card fade-in">
+        <div class="project-img">🏢</div>
+        <div class="project-body">
+          <div class="project-tag">Web Development · Corporate</div>
+          <h3>NIGTAN LIMITED Website</h3>
+          <p>Manages website for NIGTAN LIMITED. Includes company profile, services, and contact management with a professional brand presence.</p>
+          <!-- ============================================================
+               NIGTAN WEBSITE LINK — Replace href with the actual website URL
+               Example: href="https://www.nigtan.com"
+               ============================================================ -->
+          <a href="https://nigtan.com" target="_blank" rel="noopener"
+            style="display:inline-flex;align-items:center;gap:0.5rem;margin-top:1.2rem;font-family:'DM Mono',monospace;font-size:0.72rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold);text-decoration:none;border-bottom:1px solid rgba(201,168,76,0.3);padding-bottom:2px;transition:all 0.3s;"
+            onmouseover="this.style.borderColor='var(--gold)'"
+            onmouseout="this.style.borderColor='rgba(201,168,76,0.3)'">
+            nigtan.com ↗
+          </a>
+        </div>
+      </div>
+
+      <div class="project-card fade-in">
+        <div class="project-img">🏭</div>
+        <div class="project-body">
+          <div class="project-tag">Web Development · Corporate</div>
+          <h3>Afrah Plastics Limited Website</h3>
+          <p>Personally built the corporate digital home for Afrah Plastics Limited — mobile-responsive, brand-aligned, and optimised for customer engagement and product visibility.</p>
+          <!-- ============================================================
+               AFRAH PLASTICS WEBSITE LINK — Replace href with actual URL
+               Example: href="https://www.afrahplastics.com"
+               ============================================================ -->
+          <a href="https://afrahplasticsltd.netlify.app" target="_blank" rel="noopener"
+            style="display:inline-flex;align-items:center;gap:0.5rem;margin-top:1.2rem;font-family:'DM Mono',monospace;font-size:0.72rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold);text-decoration:none;border-bottom:1px solid rgba(201,168,76,0.3);padding-bottom:2px;transition:all 0.3s;"
+            onmouseover="this.style.borderColor='var(--gold)'"
+            onmouseout="this.style.borderColor='rgba(201,168,76,0.3)'">
+            afrahplasticsltd.com ↗
+          </a>
+        </div>
+      </div>
+
+      <div class="project-card fade-in">
+        <div class="project-img">🛡️</div>
+        <div class="project-body">
+          <div class="project-tag">Graphic Design · Government</div>
+          <h3>Posters & Graphics — NSCDC Kano Command</h3>
+          <p>Vitual assistant Gender-based Violence Unit — Handle all official poster and graphics design requests for the NSCDC Kano State Command.</p>
+        </div>
+      </div>
+
+      <div class="project-card fade-in">
+        <div class="project-img">📋</div>
+        <div class="project-body">
+          <div class="project-tag">Document Design · Business</div>
+          <h3>Professional School Support Services Brief</h3>
+          <p>Produced a polished Word document for a Professional School Support Services business, covering document support, formatting, printing, and digital assistance offerings for educational institutions.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience">
+  <div style="max-width:1200px;margin:0 auto;">
+  <div class="section-header fade-in">
+    <div class="section-num">04</div>
+    <h2>My <span>Experience</span></h2>
+  </div>
+  <div class="timeline">
+
+    <div class="timeline-item fade-in">
+      <div class="timeline-dot"></div>
+      <div class="timeline-date">Current Position</div>
+      <h3>IT Officer & Social Media Campaign Manager</h3>
+      <div class="org">NIGTAN LIMITED — Kano, Nigeria</div>
+      <ul>
+        <li>Designed and deployed the organisation's full corporate website independently</li>
+        <li>Manage all IT infrastructure, systems, and technical operations</li>
+        <li>Plan and execute strategic social media campaigns across platforms</li>
+        <li>Oversee digital brand identity and online communications</li>
+      </ul>
+    </div>
+
+    <div class="timeline-item fade-in">
+      <div class="timeline-dot"></div>
+      <div class="timeline-date">Current Position</div>
+      <h3>Chief IT Officer & Social Media Campaign Manager</h3>
+      <div class="org">Afrah Plastics Limited — Kano, Nigeria</div>
+      <ul>
+        <li>Built the corporate website from scratch with a professional, responsive design</li>
+        <li>Manage all digital platforms and IT operations</li>
+        <li>Develop and execute content marketing and social media strategies</li>
+        <li>Provide ongoing IT support and infrastructure management</li>
+      </ul>
+    </div>
+
+    <div class="timeline-item fade-in">
+      <div class="timeline-dot"></div>
+      <div class="timeline-date">Active Collaboration</div>
+      <h3>Graphics Designer</h3>
+      <div class="org">NSCDC Kano State Command</div>
+      <ul>
+        <li>Virtual Assistant Gender-based Violence Unit</li>
+        <li>Handle all official poster and graphics design requests for the Command</li>
+        <li>Produce professional visual materials for awareness campaigns and events</li>
+      </ul>
+    </div>
+
+    <div class="timeline-item fade-in">
+      <div class="timeline-dot"></div>
+      <div class="timeline-date">University Degree</div>
+      <h3>Northwest University Kano</h3>
+      <div class="org">2022 - 2026 — Kano, Nigeria</div>
+      <ul>
+        <li>Combining academic rigour with active professional IT practice</li>
+        <li>Applying coursework directly to real-world client and organisational projects</li>
+      </ul>
+    </div>
+
+  </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="contact-inner">
+    <div class="section-header fade-in">
+      <div class="section-num">05</div>
+      <h2>Get In <span>Touch</span></h2>
+    </div>
+    <div class="contact-grid">
+
+      <div class="contact-info fade-in">
+        <h3>Let's Work Together</h3>
+        <p>Have a project in mind? Looking for a dedicated IT professional? I'm available for freelance work, full-time roles, and corporate partnerships. Reach out directly.</p>
+        <div class="contact-items">
+          <a href="mailto:imranaharuna551@gmail.com" class="contact-item">
+            <span class="contact-item-icon">✉️</span>
+            <div class="contact-item-text">
+              <span class="contact-item-label">Email</span>
+              <span class="contact-item-value">imranaharuna551@gmail.com</span>
+            </div>
+          </a>
+          <a href="tel:+2348036726862" class="contact-item">
+            <span class="contact-item-icon">📞</span>
+            <div class="contact-item-text">
+              <span class="contact-item-label">Phone</span>
+              <span class="contact-item-value">+234 803 672 6862</span>
+            </div>
+          </a>
+          <div class="contact-item" style="cursor:default;">
+            <span class="contact-item-icon">📍</span>
+            <div class="contact-item-text">
+              <span class="contact-item-label">Location</span>
+              <span class="contact-item-value">Kano, Nigeria</span>
+            </div>
+          </div>
+        </div>
+        <!-- WHATSAPP BUTTON -->
+        <a href="https://wa.me/2348036726862?text=Hello%20Imrana%2C%20I%20found%20your%20portfolio%20and%20I%27d%20like%20to%20discuss%20a%20project." class="wa-button" target="_blank" rel="noopener">
+          <svg class="wa-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+          </svg>
+          Chat on WhatsApp
+        </a>
+      </div>
+
+      <div class="fade-in">
+        <div style="background:var(--dark3);border:1px solid rgba(201,168,76,0.15);padding:2.5rem;">
+          <h3 style="font-family:'Playfair Display',serif;font-size:1.2rem;margin-bottom:1.5rem;color:var(--gold);">Quick Inquiry</h3>
+          <div style="display:flex;flex-direction:column;gap:1rem;">
+            <input type="text" placeholder="Your Full Name" style="padding:0.9rem 1.1rem;background:var(--dark4);border:1px solid rgba(201,168,76,0.2);color:var(--text);font-family:'DM Sans',sans-serif;font-size:0.9rem;outline:none;transition:border 0.3s;" onfocus="this.style.borderColor='rgba(201,168,76,0.7)'" onblur="this.style.borderColor='rgba(201,168,76,0.2)'"/>
+            <input type="email" placeholder="Email Address" style="padding:0.9rem 1.1rem;background:var(--dark4);border:1px solid rgba(201,168,76,0.2);color:var(--text);font-family:'DM Sans',sans-serif;font-size:0.9rem;outline:none;transition:border 0.3s;" onfocus="this.style.borderColor='rgba(201,168,76,0.7)'" onblur="this.style.borderColor='rgba(201,168,76,0.2)'"/>
+            <select style="padding:0.9rem 1.1rem;background:var(--dark4);border:1px solid rgba(201,168,76,0.2);color:var(--text-muted);font-family:'DM Sans',sans-serif;font-size:0.9rem;outline:none;">
+              <option value="">Service Required</option>
+              <option>Web Development</option>
+              <option>Social Media Management</option>
+              <option>IT Management</option>
+              <option>Document & Presentation Design</option>
+              <option>Digital Branding</option>
+              <option>School Support Services</option>
+              <option>Other</option>
+            </select>
+            <textarea placeholder="Tell me about your project..." rows="4" style="padding:0.9rem 1.1rem;background:var(--dark4);border:1px solid rgba(201,168,76,0.2);color:var(--text);font-family:'DM Sans',sans-serif;font-size:0.9rem;outline:none;resize:vertical;transition:border 0.3s;" onfocus="this.style.borderColor='rgba(201,168,76,0.7)'" onblur="this.style.borderColor='rgba(201,168,76,0.2)'"></textarea>
+            <button onclick="sendInquiry()" class="btn-primary" style="justify-content:center;">Send Message →</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-logo">Imrana Haruna Abdullah</div>
+    <div class="footer-copy">© 2026 · All Rights Reserved · Kano, Nigeria</div>
+    <button class="footer-tc" onclick="document.getElementById('tcModal').classList.add('active')">Terms & Conditions</button>
+  </div>
+</footer>
+
+<!-- T&C MODAL -->
+<div class="modal-overlay" id="tcModal">
+  <div class="modal">
+    <button class="modal-close" onclick="document.getElementById('tcModal').classList.remove('active')">✕</button>
+    <h2>Terms & <span style="color:var(--gold)">Conditions</span></h2>
+    <div class="modal-date">Effective Date: June 2026 · Kano, Nigeria</div>
+
+    <p>These Terms and Conditions govern the provision of professional IT, web development, digital marketing, and related services by <strong>Imrana Haruna Abdullah</strong> ("the Professional") to clients ("you"). By engaging my services, you agree to these terms in full.</p>
+
+    <div class="modal-divider"></div>
+
+    <h3>1. Services Offered</h3>
+    <p>I provide the following professional services:</p>
+    <ul>
+      <li>Web design and development</li>
+      <li>IT infrastructure management and technical support</li>
+      <li>Social media strategy and campaign management</li>
+      <li>Document design, formatting, and production</li>
+      <li>Digital branding and graphic design</li>
+      <li>School support and educational digital services</li>
+    </ul>
+
+    <h3>2. Engagement & Agreement</h3>
+    <p>All projects commence upon written or verbal agreement on scope and fees. A project brief or confirmation message serves as the binding agreement. Significant changes to project scope after commencement may attract additional charges.</p>
+
+    <h3>3. Payment Terms</h3>
+    <ul>
+      <li>A deposit of <strong>50% of the agreed fee</strong> is required before work begins on any project.</li>
+      <li>The remaining balance is due upon project completion and before final file handover.</li>
+      <li>Accepted payment methods will be communicated at the time of engagement.</li>
+      <li>Late payments may result in suspension of services.</li>
+    </ul>
+
+    <h3>4. Revisions</h3>
+    <p>Each project includes up to <strong>two (2) rounds of revisions</strong> at no additional cost. Further revisions beyond this will be billed at an hourly or agreed flat rate. Revision requests must be submitted within 7 days of delivery.</p>
+
+    <h3>5. Intellectual Property</h3>
+    <p>All completed work becomes the intellectual property of the client upon receipt of full payment. Prior to full payment, all materials remain the property of the Professional. The Professional reserves the right to display completed work in their portfolio unless otherwise agreed in writing.</p>
+
+    <h3>6. Confidentiality</h3>
+    <p>All client information, business data, and project details shared during engagement are treated as strictly confidential and will not be disclosed to third parties without prior written consent, except where required by law.</p>
+
+    <h3>7. Client Responsibilities</h3>
+    <ul>
+      <li>Provide all required content, assets, and information in a timely manner.</li>
+      <li>Review and approve deliverables within the agreed timeframe.</li>
+      <li>Ensure all materials provided are legally owned or licensed by the client.</li>
+    </ul>
+
+    <h3>8. Turnaround Time</h3>
+    <p>Estimated delivery timelines are provided at project commencement. Delays caused by late provision of client materials, late feedback, or changes to scope will extend delivery timelines proportionally. The Professional will always communicate proactively about any delays.</p>
+
+    <h3>9. Limitation of Liability</h3>
+    <p>The Professional's liability is limited to the value of fees paid for the specific project in question. No liability is accepted for indirect, incidental, or consequential damages arising from the use of delivered work.</p>
+
+    <h3>10. Cancellation Policy</h3>
+    <ul>
+      <li>Cancellations before work has begun — full deposit refund.</li>
+      <li>Cancellations after work has begun — deposit is non-refundable; charges apply for work completed to date.</li>
+      <li>The Professional reserves the right to terminate an engagement if a client behaves abusively or fails to meet payment obligations.</li>
+    </ul>
+
+    <h3>11. Governing Law</h3>
+    <p>These Terms are governed by the laws of the <strong>Federal Republic of Nigeria</strong>. Any disputes shall be resolved through mutual negotiation first; failing that, through appropriate legal channels in Kano State.</p>
+
+    <h3>12. Contact</h3>
+    <p>For any questions regarding these Terms and Conditions, please reach out via the contact section of this website or on WhatsApp.</p>
+
+    <div class="modal-divider"></div>
+    <p style="font-size:0.8rem;color:var(--text-muted);">By engaging the services of Imrana Haruna Abdullah, you acknowledge that you have read, understood, and agree to these Terms and Conditions.</p>
+  </div>
+</div>
+
+<script>
+// Scroll animations
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible'); });
+}, { threshold: 0.1 });
+
+document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+// Close modal on overlay click
+document.getElementById('tcModal').addEventListener('click', function(e) {
+  if(e.target === this) this.classList.remove('active');
+});
+
+// Mobile menu
+function toggleMenu() {
+  const links = document.querySelector('.nav-links');
+  if(links.style.display === 'flex') {
+    links.style.display = 'none';
+  } else {
+    links.style.display = 'flex';
+    links.style.flexDirection = 'column';
+    links.style.position = 'absolute';
+    links.style.top = '70px';
+    links.style.left = '0';
+    links.style.right = '0';
+    links.style.background = 'rgba(10,10,15,0.97)';
+    links.style.padding = '2rem';
+    links.style.gap = '1.5rem';
+    links.style.borderBottom = '1px solid rgba(201,168,76,0.2)';
+  }
+}
+
+// Close mobile menu on link click
+document.querySelectorAll('.nav-links a').forEach(a => {
+  a.addEventListener('click', () => {
+    document.querySelector('.nav-links').style.display = 'none';
+  });
+});
+
+// Inquiry form
+function sendInquiry() {
+  const inputs = document.querySelectorAll('#contact input, #contact textarea, #contact select');
+  let allFilled = true;
+  inputs.forEach(i => { if(!i.value.trim()) allFilled = false; });
+  if(!allFilled) {
+    alert('Please fill in all fields before sending.');
+    return;
+  }
+  alert('Thank you! Your message has been received. I will get back to you shortly.');
+  inputs.forEach(i => i.value = '');
+}
+</script>
+
+</body>
+</html>
