@@ -710,6 +710,15 @@
 
   .project-link:hover { border-color: var(--gold); }
 
+  .project-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 1.2rem;
+    margin-top: 1.2rem;
+  }
+
+  .project-links .project-link { margin-top: 0; }
+
   /* EXPERIENCE */
   #experience {
     max-width: 1200px;
@@ -1376,8 +1385,26 @@
         <div class="project-img">🛒</div>
         <div class="project-body">
           <div class="project-tag">Web Development · Analytics · E-commerce</div>
-          <h3>Yoyos Devices, Product Landing Pages</h3>
-          <p>Five product sites, each in its own repository and deployment. Every page carries a live Google Analytics 4 property, Meta Pixel, full e-commerce structured data, and an order flow that captures the lead, issues an order reference and carries it through to confirmation.</p>
+          <h3>Yoyos Devices, Store &amp; Product Landing Pages</h3>
+          <p>The main storefront plus five product landing pages, each in its own repository and deployment. Every page carries a live Google Analytics 4 property, Meta Pixel, full e-commerce structured data, and an order flow that captures the lead, issues an order reference and carries it through to confirmation.</p>
+          <div class="project-links">
+            <a class="project-link" href="https://yoyosdevices.com.ng" target="_blank" rel="noopener">Store ↗</a>
+            <a class="project-link" href="https://airteaser.yoyosdevices.com.ng" target="_blank" rel="noopener">Air Teaser ↗</a>
+            <a class="project-link" href="https://mistfans.yoyosdevices.com.ng" target="_blank" rel="noopener">MistFan ↗</a>
+            <a class="project-link" href="https://proseries.yoyosdevices.com.ng" target="_blank" rel="noopener">Pro Series ↗</a>
+            <a class="project-link" href="https://r11fans.yoyosdevices.com.ng" target="_blank" rel="noopener">R11 Handheld Fan ↗</a>
+            <a class="project-link" href="https://type928.yoyosdevices.com.ng" target="_blank" rel="noopener">Type 928 ↗</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card fade-in">
+        <div class="project-img">🎓</div>
+        <div class="project-body">
+          <div class="project-tag">Web Development · Systems · Education</div>
+          <h3>Secondary School Management Portal</h3>
+          <p>A complete Django + MySQL school system built across nine phases: role-based dashboards for super admins, teachers, students and parents; results entry and approval with automatic grades and class positions; fee invoicing and payment tracking; PDF report cards, transcripts and student ID cards; announcements, assignments, notifications and audit logging.</p>
+          <a class="project-link" href="https://github.com/SirAmran/school-portal" target="_blank" rel="noopener">github.com/SirAmran/school-portal ↗</a>
         </div>
       </div>
 
