@@ -4,20 +4,20 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-<title>Imrana Haruna Abdullah: Web Developer, Technical SEO & Web Analytics</title>
-<meta name="description" content="I build websites and then measure them. Hand-written HTML, CSS and JavaScript, deployed with Google Analytics 4, conversion tracking, technical SEO and structured data wired in from the start. Kano, Nigeria."/>
+<title>Imrana Haruna Abdullah: Fullstack &amp; ERPNext Developer</title>
+<meta name="description" content="Fullstack developer in Kano, Nigeria: web apps, ERPNext and Frappe customisation, Django systems, technical SEO and analytics. Front end, back end, database and deployment."/>
 <link rel="canonical" href="https://portfolioimrana.yoyosdevices.com.ng/"/>
 
 <meta property="og:type" content="website"/>
-<meta property="og:title" content="Imrana Haruna Abdullah: Web Developer, Technical SEO & Web Analytics"/>
-<meta property="og:description" content="I build websites and then measure them. Analytics, conversion tracking and technical SEO wired in from the start."/>
+<meta property="og:title" content="Imrana Haruna Abdullah: Fullstack &amp; ERPNext Developer"/>
+<meta property="og:description" content="Fullstack development, ERPNext and Frappe customisation, Django systems, technical SEO and analytics."/>
 <meta property="og:url" content="https://portfolioimrana.yoyosdevices.com.ng/"/>
 <meta property="og:image" content="https://portfolioimrana.yoyosdevices.com.ng/favicon.png"/>
 <meta property="og:locale" content="en_NG"/>
 
 <meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:title" content="Imrana Haruna Abdullah: Web Developer, Technical SEO & Web Analytics"/>
-<meta name="twitter:description" content="I build websites and then measure them."/>
+<meta name="twitter:title" content="Imrana Haruna Abdullah: Fullstack &amp; ERPNext Developer"/>
+<meta name="twitter:description" content="Fullstack development, ERPNext and Frappe customisation, and analytics."/>
 <meta name="twitter:image" content="https://portfolioimrana.yoyosdevices.com.ng/favicon.png"/>
 
 <link rel="icon" href="favicon.png">
@@ -36,8 +36,8 @@
       "@type": "Person",
       "@id": "https://portfolioimrana.yoyosdevices.com.ng/#person",
       "name": "Imrana Haruna Abdullah",
-      "jobTitle": "Web Developer",
-      "description": "Web developer working in technical SEO, web analytics and workflow automation.",
+      "jobTitle": "Fullstack & ERPNext Developer",
+      "description": "Fullstack developer working in ERPNext and Frappe customisation, technical SEO, web analytics and workflow automation.",
       "url": "https://portfolioimrana.yoyosdevices.com.ng/",
       "image": "https://portfolioimrana.yoyosdevices.com.ng/profile.jpg",
       "email": "mailto:imranaharuna551@gmail.com",
@@ -53,20 +53,26 @@
         "name": "Northwest University, Kano"
       },
       "knowsAbout": [
-        "Web Development",
+        "Fullstack Development",
         "Technical SEO",
         "Google Analytics 4",
         "Conversion Tracking",
         "Structured Data",
         "Workflow Automation",
         "Netlify",
-        "WordPress"
+        "WordPress",
+        "ERPNext",
+        "Frappe",
+        "Django",
+        "Next.js",
+        "REST APIs",
+        "Supabase"
       ]
     },
     {
       "@type": "ProfessionalService",
       "@id": "https://portfolioimrana.yoyosdevices.com.ng/#service",
-      "name": "Imrana Haruna Abdullah: Web Development & Analytics",
+      "name": "Imrana Haruna Abdullah: Fullstack & ERPNext Development",
       "url": "https://portfolioimrana.yoyosdevices.com.ng/",
       "image": "https://portfolioimrana.yoyosdevices.com.ng/favicon.png",
       "email": "mailto:imranaharuna551@gmail.com",
@@ -87,10 +93,10 @@
         "name": "Services",
         "itemListElement": [
           { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Website and landing page development" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "ERPNext and Frappe customisation" } },
           { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Technical SEO" } },
           { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Google Analytics 4 and conversion tracking setup" } },
           { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Lead capture and workflow automation" } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Digital branding and graphic design" } },
           { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Document and presentation design" } }
         ]
       }
@@ -719,6 +725,101 @@
 
   .project-links .project-link { margin-top: 0; }
 
+  /* LANGUAGE BAR (GitHub-style) */
+  .project-langs { margin-top: 1.4rem; }
+
+  .lang-head {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 0.45rem;
+    font-family: 'DM Mono', monospace;
+    font-size: 0.62rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+  }
+
+  .lang-head strong {
+    font-weight: 500;
+    color: var(--text);
+    opacity: 0.8;
+    letter-spacing: 0.06em;
+  }
+
+  .lang-bar {
+    display: flex;
+    width: 100%;
+    height: 9px;
+    border-radius: 999px;
+    overflow: hidden;
+    background: var(--dark4);
+    box-shadow: inset 0 0 0 1px rgba(255,255,255,0.04);
+  }
+
+  .lang-bar i {
+    display: block;
+    height: 100%;
+    min-width: 2px;
+    transition: filter 0.2s;
+  }
+
+  .lang-bar:hover i { filter: brightness(1.15); }
+
+  .lang-legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem 0.95rem;
+    margin-top: 0.6rem;
+    list-style: none;
+  }
+
+  .lang-legend li {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    font-family: 'DM Mono', monospace;
+    font-size: 0.68rem;
+    color: var(--text-muted);
+  }
+
+  .lang-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  .lang-legend .lang-pct { color: var(--text); opacity: 0.85; }
+
+  .project-more {
+    display: flex;
+    width: max-content;
+    align-items: center;
+    gap: 0.55rem;
+    margin-top: 1.2rem;
+    padding: 0.55rem 1.05rem;
+    background: transparent;
+    border: 1px solid rgba(201,168,76,0.35);
+    color: var(--gold);
+    font-family: 'DM Mono', monospace;
+    font-size: 0.68rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background 0.25s, border-color 0.25s, transform 0.25s;
+  }
+
+  .project-more:hover {
+    background: rgba(201,168,76,0.1);
+    border-color: var(--gold);
+    transform: translateY(-1px);
+  }
+
+  .project-more .arrow { transition: transform 0.25s; }
+  .project-more:hover .arrow { transform: translateX(3px); }
+
   /* EXPERIENCE */
   #experience {
     max-width: 1200px;
@@ -1029,6 +1130,150 @@
     margin: 1.5rem 0;
   }
 
+  /* PROJECT DETAIL MODAL */
+  #projectModal .modal { max-width: 840px; }
+
+  .pm-eyebrow {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.66rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 0.7rem;
+    padding-right: 3rem;
+  }
+
+  #projectModal .pm-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.6rem, 4vw, 2.3rem);
+    line-height: 1.15;
+    margin-bottom: 0.9rem;
+    color: var(--text);
+  }
+
+  #projectModal .pm-summary {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    line-height: 1.75;
+  }
+
+  .pm-meta {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 0.8rem;
+    margin: 1.6rem 0 0.4rem;
+  }
+
+  .pm-meta div {
+    background: var(--dark3);
+    border: 1px solid rgba(201,168,76,0.12);
+    padding: 0.7rem 0.85rem;
+  }
+
+  .pm-meta span {
+    display: block;
+    font-family: 'DM Mono', monospace;
+    font-size: 0.58rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 0.15rem;
+  }
+
+  .pm-meta strong {
+    display: block;
+    font-size: 0.82rem;
+    font-weight: 500;
+    color: var(--text);
+    line-height: 1.45;
+  }
+
+  .pm-section { margin-top: 2rem; }
+
+  .pm-section h3,
+  .pm-readme h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.02rem;
+    color: var(--gold);
+    margin-top: 0;
+    margin-bottom: 0.55rem;
+  }
+
+  .pm-section p,
+  .pm-section li,
+  .pm-readme p,
+  .pm-readme li {
+    font-size: 0.89rem;
+    color: var(--text-muted);
+    line-height: 1.8;
+  }
+
+  .pm-section p + p,
+  .pm-readme p + p { margin-top: 0.7rem; }
+
+  .pm-section ul,
+  .pm-readme ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    margin-top: 0.35rem;
+  }
+
+  .pm-section ul li,
+  .pm-readme ul li {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.6rem;
+  }
+
+  .pm-section ul li::before,
+  .pm-readme ul li::before {
+    content: '▸';
+    color: var(--gold);
+    font-size: 0.65rem;
+    flex-shrink: 0;
+    margin-top: 0.3rem;
+  }
+
+  .pm-readme {
+    margin-top: 2.2rem;
+    padding-top: 1.7rem;
+    border-top: 1px solid rgba(201,168,76,0.15);
+  }
+
+  .pm-readme-title {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.66rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 1.4rem;
+  }
+
+  .pm-readme h3 { margin-top: 1.5rem; }
+  .pm-readme h3:first-of-type { margin-top: 0; }
+
+  .pm-readme code {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.82em;
+    background: var(--dark4);
+    border: 1px solid rgba(201,168,76,0.15);
+    padding: 0.08em 0.35em;
+    color: var(--gold-light);
+  }
+
+  .pm-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.7rem 1.4rem;
+    margin-top: 2rem;
+    padding-top: 1.4rem;
+    border-top: 1px solid rgba(201,168,76,0.15);
+  }
+
+  .pm-links .project-link { margin-top: 0; }
+
   /* FOOTER */
   footer {
     background: var(--dark);
@@ -1147,6 +1392,9 @@
 
     .modal { padding: 2rem 1.5rem; }
 
+    .pm-meta { grid-template-columns: 1fr 1fr; gap: 0.7rem; }
+    .pm-title { padding-right: 1.5rem; }
+
     .footer-inner { flex-direction: column; gap: 1rem; text-align: center; }
   }
 </style>
@@ -1180,16 +1428,16 @@
   <div class="hero-grid"></div>
   <div class="hero-content">
     <div style="display:flex;align-items:center;gap:2rem;margin-bottom:1.5rem;flex-wrap:wrap;">
-      <div style="flex-shrink:0;width:110px;height:110px;border-radius:50%;border:2px solid var(--gold);box-shadow:0 0 30px rgba(201,168,76,0.3);overflow:hidden;background:var(--dark3);display:flex;align-items:center;justify-content:center;">
+      <div style="flex-shrink:0;width:120px;height:120px;border-radius:50%;border:2px solid var(--gold);box-shadow:0 0 30px rgba(201,168,76,0.3);overflow:hidden;background:#fff;display:flex;align-items:center;justify-content:center;">
         <img src="profile.jpg" alt="Imrana Haruna Abdullah"
-          style="width:100%;height:100%;object-fit:cover;"
+          style="width:100%;height:100%;object-fit:contain;object-position:center;"
           onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
         <span style="display:none;font-size:2.5rem;align-items:center;justify-content:center;width:100%;height:100%;">👤</span>
       </div>
-      <div class="hero-tag" style="margin-bottom:0;">Web Developer · Technical SEO · Web Analytics</div>
+      <div class="hero-tag" style="margin-bottom:0;">Fullstack Developer · ERPNext Developer · Technical SEO</div>
     </div>
     <h1>Imrana Haruna<br><span>Abdullah</span></h1>
-    <p class="hero-desc">I build websites, then measure them. Hand-written HTML, CSS and JavaScript, deployed with analytics, conversion tracking and technical SEO wired in from the start, so you can see what is actually working.</p>
+    <p class="hero-desc">I build products end to end: the interface, the API, the database and the deployment, with analytics, conversion tracking and technical SEO wired in from the start. Web apps, ERPNext and Frappe systems, and the reporting that shows what is actually working.</p>
     <div class="hero-ctas">
       <a href="#contact" class="btn-primary">
         <span>Hire Me</span>
@@ -1202,12 +1450,12 @@
   </div>
   <div class="hero-stats">
     <div class="stat">
-      <div class="stat-num">2</div>
+      <div class="stat-num">4</div>
       <div class="stat-label">Company Websites</div>
     </div>
     <div class="stat">
-      <div class="stat-num">5</div>
-      <div class="stat-label">Product Landing Pages</div>
+      <div class="stat-num">9</div>
+      <div class="stat-label">Live Deployments</div>
     </div>
     <div class="stat">
       <div class="stat-num">2020</div>
@@ -1224,22 +1472,24 @@
         <div class="section-num">01</div>
         <h2>About <span>Me</span></h2>
       </div>
-      <p>I am a <strong>web developer working in analytics and search</strong>, based in Kano, Nigeria. I build the page, install the tracking, and then fix what the numbers show, which is the part most people skip.</p>
-      <p>I coordinate the website at <strong>NIGTAN Limited</strong>, where I supervised and contributed to the build and have maintained it since. I built the <strong>Afrah Plastics Limited</strong> platform entirely, end to end: the site, its AI assistant and the mobile admin.</p>
-      <p>I also contribute graphic design to gender-focused civic communications with the <strong>NSCDC Kano State Command</strong>, and I am completing a Computer Science degree at <strong>Northwest University, Kano</strong> (formerly Yusuf Maitama Sule University), graduating December 2026.</p>
+      <p>I am a <strong>fullstack developer</strong> based in Kano, Nigeria. I work across the whole stack: hand-written interfaces, server-side code, databases and deployment, plus the analytics and search work that tells you whether any of it is landing.</p>
+      <p>I coordinate the website at <strong>NIGTAN Limited</strong> and I built the <strong>Afrah Plastics Limited</strong> platform end to end: a CMS-driven catalogue, a 24/7 automated assistant, a private store-management admin app, SEO and W3C-validated pages. For <strong>Yoyos Devices</strong> I run the storefront and five separate product landing pages, and for <strong>Bagaja</strong> I built the customer app and the agent's reconciliation desk.</p>
+      <p>On the systems side I customise <strong>ERPNext and Frappe</strong> (DocTypes, server and client scripts, print formats, reports and integrations) and I built a Django school management portal across nine phases. I am completing a Computer Science degree at <strong>Northwest University, Kano</strong> (formerly Yusuf Maitama Sule University), graduating December 2026.</p>
       <div class="skills-grid">
-        <div class="skill-tag">Web Development</div>
+        <div class="skill-tag">Fullstack Development</div>
+        <div class="skill-tag">ERPNext &amp; Frappe</div>
+        <div class="skill-tag">Django</div>
+        <div class="skill-tag">Next.js</div>
+        <div class="skill-tag">Python</div>
+        <div class="skill-tag">TypeScript</div>
+        <div class="skill-tag">SQL &amp; PostgreSQL</div>
+        <div class="skill-tag">REST APIs</div>
         <div class="skill-tag">Technical SEO</div>
         <div class="skill-tag">Google Analytics 4</div>
         <div class="skill-tag">Conversion Tracking</div>
         <div class="skill-tag">Structured Data</div>
-        <div class="skill-tag">Workflow Automation</div>
-        <div class="skill-tag">Google Search Console</div>
-        <div class="skill-tag">SQL</div>
-        <div class="skill-tag">Python</div>
         <div class="skill-tag">Netlify &amp; GitHub</div>
         <div class="skill-tag">WordPress</div>
-        <div class="skill-tag">Graphic Design</div>
       </div>
     </div>
     <div class="about-highlights fade-in">
@@ -1249,11 +1499,15 @@
       </div>
       <div class="highlight-card">
         <h3>🏭 Afrah Plastics Limited</h3>
-        <p>Designed and built the corporate website entirely, end to end, and deployed it.</p>
+        <p>Built the full platform: CMS-driven catalogue, 24/7 automated assistant, SEO, W3C-validated pages and a private store-management admin app.</p>
       </div>
       <div class="highlight-card">
-        <h3>🛡️ NSCDC Kano State Command</h3>
-        <p>Graphic design for the Gender-Based Violence unit: official posters and visual materials for the Command's awareness campaigns.</p>
+        <h3>🛒 Yoyos Devices</h3>
+        <p>Storefront plus five independent product landing pages, each deployed on its own with GA4, Meta Pixel and e-commerce structured data.</p>
+      </div>
+      <div class="highlight-card">
+        <h3>⚡ Bagaja Vending</h3>
+        <p>Two apps: a customer ordering PWA and the agent desk that reconciles payments, captures tokens and records delivery.</p>
       </div>
       <div class="highlight-card">
         <h3>🎓 University Student</h3>
@@ -1273,14 +1527,27 @@
 
     <div class="service-card fade-in">
       <div class="service-icon">💻</div>
-      <h3>Website Development</h3>
-      <p>Sites built from concept to launch: fast, responsive, hand-written, and deployed on your own domain.</p>
+      <h3>Fullstack Development</h3>
+      <p>Products built from interface to database: the page, the API behind it, the data model and the deployment.</p>
       <ul class="service-list">
-        <li>Corporate website design &amp; development</li>
-        <li>Landing pages &amp; microsites</li>
-        <li>Mobile-responsive layouts</li>
-        <li>Performance optimisation</li>
-        <li>Website maintenance &amp; updates</li>
+        <li>Fullstack web apps &amp; dashboards</li>
+        <li>REST APIs &amp; database design</li>
+        <li>Corporate websites &amp; landing pages</li>
+        <li>Mobile-responsive front ends</li>
+        <li>Deployment, maintenance &amp; updates</li>
+      </ul>
+    </div>
+
+    <div class="service-card fade-in">
+      <div class="service-icon">🧩</div>
+      <h3>ERPNext &amp; Business Systems</h3>
+      <p>Custom work on ERPNext and Frappe: I extend the system a business already runs instead of forcing the business into a template.</p>
+      <ul class="service-list">
+        <li>Custom DocTypes &amp; field logic</li>
+        <li>Server &amp; client scripts</li>
+        <li>Print formats &amp; reports</li>
+        <li>Roles, permissions &amp; workflows</li>
+        <li>REST &amp; webhook integrations</li>
       </ul>
     </div>
 
@@ -1324,19 +1591,6 @@
     </div>
 
     <div class="service-card fade-in">
-      <div class="service-icon">🎨</div>
-      <h3>Digital Branding &amp; Graphics</h3>
-      <p>Visual identity and digital assets that make your organisation look like it means business.</p>
-      <ul class="service-list">
-        <li>Brand identity design</li>
-        <li>Social media graphics</li>
-        <li>Event &amp; campaign creatives</li>
-        <li>Email banners &amp; headers</li>
-        <li>Digital flyers &amp; posters</li>
-      </ul>
-    </div>
-
-    <div class="service-card fade-in">
       <div class="service-icon">📄</div>
       <h3>Document &amp; Presentation Design</h3>
       <p>Professional documents, reports, CVs and presentations, formatted properly for the people who have to read them.</p>
@@ -1361,17 +1615,26 @@
     </div>
     <div class="projects-grid">
 
-      <div class="project-card fade-in">
-        <div class="project-img">🏭</div>
+      <div class="project-card fade-in" data-project="erpnext">
+        <div class="project-img">🧩</div>
         <div class="project-body">
-          <div class="project-tag">Web Development · AI · Corporate</div>
-          <h3>Afrah Plastics Limited</h3>
-          <p>The shop's whole web presence, built end to end: a product catalogue with live pricing, a WhatsApp checkout that turns a basket into an order, a contact form and a live map. It also carries an AI assistant that answers customers from the live catalogue, and an installable mobile admin (APK/PWA) the owners use to change prices and stock from a phone.</p>
-          <a class="project-link" href="https://afrahplasticsltd.netlify.app" target="_blank" rel="noopener">afrahplasticsltd.netlify.app ↗</a>
+          <div class="project-tag">ERPNext · Frappe · Business Systems</div>
+          <h3>ERPNext Development</h3>
+          <p>Custom ERPNext work on the Frappe framework: DocTypes, server and client scripts, print formats, permission rules, reports and API integrations. I extend the system a business already runs instead of forcing the business into a template.</p>
         </div>
       </div>
 
-      <div class="project-card fade-in">
+      <div class="project-card fade-in" data-project="afrah">
+        <div class="project-img">🏭</div>
+        <div class="project-body">
+          <div class="project-tag">Fullstack · CMS · AI · Corporate</div>
+          <h3>Afrah Plastics Limited</h3>
+          <p>The shop's whole web presence, built end to end: a CMS-driven product catalogue with live pricing, a WhatsApp checkout, SEO and W3C-validated pages, and a 24/7 automated assistant that answers customers from the live catalogue. A private admin app gives the owners store management from a phone: orders, prices, stock, photos and customers.</p>
+          <a class="project-link" href="https://afrahplasticsltd.netlify.app" target="_blank" rel="noopener">afrahplasticsltd ↗</a>
+        </div>
+      </div>
+
+      <div class="project-card fade-in" data-project="nigtan">
         <div class="project-img">🏢</div>
         <div class="project-body">
           <div class="project-tag">Web Development · Corporate</div>
@@ -1381,24 +1644,27 @@
         </div>
       </div>
 
-      <div class="project-card fade-in">
+      <div class="project-card fade-in" data-project="yoyos">
         <div class="project-img">🛒</div>
         <div class="project-body">
-          <div class="project-tag">Web Development · Analytics · E-commerce</div>
-          <h3>Yoyos Devices, Store &amp; Product Landing Pages</h3>
-          <p>The main storefront plus five product landing pages, each in its own repository and deployment. Every page carries a live Google Analytics 4 property, Meta Pixel, full e-commerce structured data, and an order flow that captures the lead, issues an order reference and carries it through to confirmation.</p>
-          <div class="project-links">
-            <a class="project-link" href="https://yoyosdevices.com.ng" target="_blank" rel="noopener">Store ↗</a>
-            <a class="project-link" href="https://airteaser.yoyosdevices.com.ng" target="_blank" rel="noopener">Air Teaser ↗</a>
-            <a class="project-link" href="https://mistfans.yoyosdevices.com.ng" target="_blank" rel="noopener">MistFan ↗</a>
-            <a class="project-link" href="https://proseries.yoyosdevices.com.ng" target="_blank" rel="noopener">Pro Series ↗</a>
-            <a class="project-link" href="https://r11fans.yoyosdevices.com.ng" target="_blank" rel="noopener">R11 Handheld Fan ↗</a>
-            <a class="project-link" href="https://type928.yoyosdevices.com.ng" target="_blank" rel="noopener">Type 928 ↗</a>
-          </div>
+          <div class="project-tag">Fullstack · E-commerce · Analytics</div>
+          <h3>Yoyos Devices Store</h3>
+          <p>The brand's main storefront: product search, category pages, a slide-out cart, bank transfer and Paystack payment routes, and a phone-confirmed order flow. GA4, Meta Pixel and e-commerce structured data are wired into the order path rather than bolted on afterwards.</p>
+          <a class="project-link" href="https://yoyosdevices.com.ng" target="_blank" rel="noopener">Store ↗</a>
         </div>
       </div>
 
-      <div class="project-card fade-in">
+      <div class="project-card fade-in" data-project="landing">
+        <div class="project-img">🎯</div>
+        <div class="project-body">
+          <div class="project-tag">Landing Pages · Analytics · SEO</div>
+          <h3>Yoyos Product Landing Pages</h3>
+          <p>Five single-product pages, each in its own repository and deployment: Air Teaser, MistFan, Pro Series, R11 Handheld Fan and Type 928. Per-product copy, structured data and tracking, so each page can be tuned without dragging the whole store along.</p>
+          <a class="project-link" href="https://airteaser.yoyosdevices.com.ng" target="_blank" rel="noopener">Air Teaser ↗</a>
+        </div>
+      </div>
+
+      <div class="project-card fade-in" data-project="school">
         <div class="project-img">🎓</div>
         <div class="project-body">
           <div class="project-tag">Web Development · Systems · Education</div>
@@ -1408,17 +1674,17 @@
         </div>
       </div>
 
-      <div class="project-card fade-in">
+      <div class="project-card fade-in" data-project="bagaja">
         <div class="project-img">⚡</div>
         <div class="project-body">
           <div class="project-tag">Product · PWA · Payments</div>
-          <h3>Bagaja Vending Desk</h3>
-          <p>A prepaid-electricity vending system for an independent agent: customers order by meter, pay by bank transfer and follow a signed tracking link; the agent's desk reconciles the transfer against the bank, records the token from Bagaja and records delivery. Two buckets, one row per job, push notifications, optional Google accounts, an offline shell, and a rule set that keeps tokens and phone numbers out of logs, analytics and push payloads.</p>
-          <a class="project-link" href="https://github.com/SirAmran/bagaja-form" target="_blank" rel="noopener">github.com/SirAmran/bagaja-form ↗</a>
+          <h3>Bagaja Vending: Customer App &amp; Agent Desk</h3>
+          <p>Two apps for a prepaid-electricity business. Customers order by meter, pay by transfer and follow a signed tracking link; the agent's desk reconciles the payment against the bank, captures the token from Bagaja and records delivery. Push notifications, an offline shell, and rules that keep tokens and phone numbers out of logs and analytics.</p>
+          <a class="project-link" href="https://bgjunit.netlify.app" target="_blank" rel="noopener">bgjunit ↗</a>
         </div>
       </div>
 
-      <div class="project-card fade-in">
+      <div class="project-card fade-in" data-project="agent">
         <div class="project-img">🤖</div>
         <div class="project-body">
           <div class="project-tag">Automation · AI · Systems</div>
@@ -1427,16 +1693,7 @@
         </div>
       </div>
 
-      <div class="project-card fade-in">
-        <div class="project-img">🛡️</div>
-        <div class="project-body">
-          <div class="project-tag">Graphic Design · Civic</div>
-          <h3>Posters &amp; Graphics, NSCDC Kano Command</h3>
-          <p>Graphic design support for the Gender-Based Violence unit: official poster and visual design requests for the Command's awareness campaigns and events.</p>
-        </div>
-      </div>
-
-      <div class="project-card fade-in">
+      <div class="project-card fade-in" data-project="docbrief">
         <div class="project-img">📋</div>
         <div class="project-body">
           <div class="project-tag">Document Design · Business</div>
@@ -1472,24 +1729,26 @@
     <div class="timeline-item fade-in">
       <div class="timeline-dot"></div>
       <div class="timeline-date">Current</div>
-      <h3>Website Developer</h3>
+      <h3>Fullstack Developer</h3>
       <div class="org">Afrah Plastics Limited: Kano, Nigeria</div>
       <ul>
-        <li>Designed and built the corporate website from scratch</li>
-        <li>Added its AI assistant, live map, WhatsApp checkout and an installable mobile admin for prices</li>
-        <li>Delivered a responsive, brand-aligned site optimised for customer engagement</li>
+        <li>Built the platform end to end: CMS, catalogue, checkout and admin app</li>
+        <li>Added the 24/7 automated assistant, SEO and W3C-validated pages</li>
+        <li>Delivered the store-management admin as an installable mobile app</li>
         <li>Deployed and handed over on a live custom domain</li>
       </ul>
     </div>
 
     <div class="timeline-item fade-in">
       <div class="timeline-dot"></div>
-      <div class="timeline-date">Ongoing collaboration</div>
-      <h3>Graphics Designer</h3>
-      <div class="org">NSCDC Kano State Command, Gender-Based Violence unit</div>
+      <div class="timeline-date">Current</div>
+      <h3>ERPNext Developer</h3>
+      <div class="org">Independent: Kano, Nigeria</div>
       <ul>
-        <li>Handle official poster and graphics design requests for the Command</li>
-        <li>Produce visual materials for awareness campaigns and events</li>
+        <li>Custom DocTypes, server and client scripts on the Frappe framework</li>
+        <li>Print formats, reports, permissions and workflow rules</li>
+        <li>REST and webhook integrations with payment and messaging systems</li>
+        <li>Bench deployments, backups and staged migrations</li>
       </ul>
     </div>
 
@@ -1582,11 +1841,11 @@
               <label class="sr-only" for="f-service">Service required</label>
               <select id="f-service" name="service" required>
                 <option value="">Service Required</option>
-                <option>Website Development</option>
+                <option>Fullstack Development</option>
+                <option>ERPNext &amp; Business Systems</option>
                 <option>Technical SEO</option>
                 <option>Analytics &amp; Conversion Tracking</option>
                 <option>Lead Capture &amp; Automation</option>
-                <option>Digital Branding &amp; Graphics</option>
                 <option>Document &amp; Presentation Design</option>
                 <option>Other</option>
               </select>
@@ -1622,19 +1881,19 @@
     <h2 id="tcTitle">Terms &amp; <span style="color:var(--gold)">Conditions</span></h2>
     <div class="modal-date">Effective Date: June 2026 · Kano, Nigeria</div>
 
-    <p>These Terms and Conditions govern the provision of professional IT, web development, analytics, digital marketing and related services by <strong>Imrana Haruna Abdullah</strong> ("the Professional") to clients ("you"). By engaging my services, you agree to these terms in full.</p>
+    <p>These Terms and Conditions govern the provision of professional IT, software development, ERPNext, analytics and related services by <strong>Imrana Haruna Abdullah</strong> ("the Professional") to clients ("you"). By engaging my services, you agree to these terms in full.</p>
 
     <div class="modal-divider"></div>
 
     <h3>1. Services Offered</h3>
     <p>I provide the following professional services:</p>
     <ul>
-      <li>Web design and development</li>
+      <li>Fullstack web development</li>
+      <li>ERPNext and Frappe customisation</li>
       <li>Technical SEO and site optimisation</li>
       <li>Analytics setup, conversion tracking and reporting</li>
       <li>Lead capture and workflow automation</li>
       <li>Document design, formatting and production</li>
-      <li>Digital branding and graphic design</li>
     </ul>
 
     <h3>2. Engagement &amp; Agreement</h3>
@@ -1685,6 +1944,20 @@
 
     <div class="modal-divider"></div>
     <p style="font-size:0.8rem;color:var(--text-muted);">By engaging the services of Imrana Haruna Abdullah, you acknowledge that you have read, understood and agree to these Terms and Conditions.</p>
+  </div>
+</div>
+
+<!-- PROJECT DETAIL MODAL -->
+<div class="modal-overlay" id="projectModal" role="dialog" aria-modal="true" aria-labelledby="pmTitle">
+  <div class="modal">
+    <button class="modal-close" id="pmClose" type="button" aria-label="Close project details">✕</button>
+    <div class="pm-eyebrow" id="pmEyebrow"></div>
+    <h2 class="pm-title" id="pmTitle"></h2>
+    <p class="pm-summary" id="pmSummary"></p>
+    <div class="pm-meta" id="pmMeta"></div>
+    <div id="pmLangs"></div>
+    <div id="pmBody"></div>
+    <div class="pm-links" id="pmLinks"></div>
   </div>
 </div>
 
@@ -1770,6 +2043,645 @@ form.addEventListener('submit', async (e) => {
     button.disabled = false;
   }
 });
+</script>
+
+<script>
+/* ============================================================
+   PROJECT DETAILS
+   One data source for the GitHub-style language bars and the
+   "More" panel on every project card. Add a project by giving
+   its card a data-project key and adding an entry here.
+   ============================================================ */
+(function () {
+  'use strict';
+
+  var COLORS = {
+    HTML: '#e34c26',
+    CSS: '#563d7c',
+    JavaScript: '#f1e05a',
+    TypeScript: '#3178c6',
+    Python: '#3572A5',
+    PHP: '#4F5D95',
+    SQL: '#e38c00',
+    Shell: '#89e051',
+    Jinja: '#a52a22',
+    Markdown: '#083fa1',
+    'Adobe Photoshop': '#31A8FF',
+    'Adobe Illustrator': '#FF9A00',
+    Canva: '#00C4CC',
+    'Microsoft Word': '#2B579A',
+    PDF: '#F40F02'
+  };
+
+  var PROJECTS = {
+
+    erpnext: {
+      title: 'ERPNext Development',
+      eyebrow: 'ERPNext · Frappe · Business Systems',
+      summary: 'Custom ERPNext work on the Frappe framework: DocTypes, server and client scripts, print formats, permission rules, reports and API integrations. I extend the system a business already runs instead of forcing the business into a template.',
+      meta: [
+        ['Role', 'ERPNext / Frappe Developer'],
+        ['Platform', 'ERPNext v15 · Frappe'],
+        ['Focus', 'Customisation & integrations'],
+        ['Status', 'Available for work']
+      ],
+      langs: [['Python', 42], ['JavaScript', 20], ['HTML', 13], ['Jinja', 12], ['SQL', 7], ['CSS', 6]],
+      overview: 'ERPNext is built on Frappe, a Python and JavaScript framework with MariaDB underneath. Most of my work is not in the settings screens: it is in the places where the standard product stops matching how a business actually operates. A new document type, a rule that must run on save, a printed invoice in the company’s own layout, a permission boundary, or a report that answers one manager’s question. Each of those is code against the same database the rest of ERPNext uses.',
+      highlights: [
+        'Custom DocTypes, child tables, naming series and field-level validation',
+        'Server-side Python for document events, hooks, scheduled jobs and whitelisted APIs',
+        'Client-side JavaScript for form behaviour, filters, child-table logic and quick entry',
+        'Jinja print formats for invoices, receipts, waybills and internal forms',
+        'Role permissions, workflow states and approval rules that match the organisation',
+        'Query reports, dashboards and charts built directly on MariaDB',
+        'REST and webhook integrations with payment, messaging and third-party systems',
+        'Bench deployment, site backups, version updates and staged migrations'
+      ],
+      readme: [
+        {
+          title: 'Stack',
+          paragraphs: ['ERPNext v15 on the Frappe Framework: Python 3 for the server, JavaScript for the desk, Jinja with HTML and CSS for print formats and web views, MariaDB for data, with Redis and Nginx around it.']
+        },
+        {
+          title: 'Typical engagement',
+          list: [
+            'Map the current process and decide what ERPNext already does well.',
+            'Design the DocTypes and relationships the process actually needs.',
+            'Write the server and client logic, then test it against real sample records.',
+            'Build the print formats and reports the staff use every day.',
+            'Stage on a bench copy, take a backup, migrate, and hand over with notes.'
+          ]
+        },
+        {
+          title: 'Working rules',
+          paragraphs: ['Backups before migrations, staging before production, and a written handover. If a requirement needs a custom app rather than a server script, I say so before writing code, because the maintenance cost is different.']
+        }
+      ],
+      links: [['Ask about this build', '#contact']]
+    },
+
+    afrah: {
+      title: 'Afrah Plastics Limited',
+      eyebrow: 'Fullstack · CMS · AI · Corporate',
+      summary: 'The shop’s entire web presence, built end to end: a CMS-driven catalogue with live pricing, a WhatsApp checkout that turns a basket into an order, SEO and W3C-validated pages, a 24/7 automated assistant that answers from the live catalogue, and a private admin app for store management.',
+      meta: [
+        ['Role', 'Fullstack developer'],
+        ['Stack', 'HTML · CSS · JavaScript · Netlify Functions · CMS'],
+        ['Status', 'Live'],
+        ['Site', 'afrahplasticsltd']
+      ],
+      langs: [['HTML', 39], ['JavaScript', 35], ['CSS', 26]],
+      overview: 'The public site is plain HTML, CSS and JavaScript with no build step; the CMS is the private admin app the owners run from a phone. Everything that needs a secret or storage is a Netlify Function. Prices live in one store, and the product cards, the order page, the assistant prompt and the structured data all read from it, or from the snapshot the admin saves. The site cannot show one price and charge another.',
+      highlights: [
+        'CMS-driven catalogue: prices, stock, photos and copy managed by the owners',
+        '24/7 automated assistant that answers customers from the live catalogue',
+        'Product catalogue, order page and WhatsApp checkout with order references',
+        'Private admin app: orders board, price and stock editing, photo uploads, customers, traffic, assistant log and CSV export',
+        'Installable mobile admin (PWA) the owners use from a phone',
+        'SEO: JSON-LD, canonicals, Open Graph, sitemap and robots generated from the same catalogue',
+        'W3C-validated HTML on every public page',
+        'Netlify Blobs storage that keeps no address, referrer or fingerprint'
+      ],
+      readme: [
+        {
+          title: 'How it fits together',
+          list: [
+            'Prices live in one place: the product cards, order page, assistant prompt and structured data all come from it.',
+            'The CMS is the private admin app, so the owners edit the store without touching code.',
+            'Business facts (addresses, hours, phone numbers, social links) live in one module.',
+            'The assistant is built on the server, so no caller can supply their own prompt.',
+            'Photos are never re-uploaded under the same name, which makes the year-long cache safe.'
+          ]
+        },
+        {
+          title: 'The admin app',
+          paragraphs: ['A private dashboard at /admin/. Each person gets their own password and every save is recorded against that name.'],
+          list: [
+            'Overview: waiting orders, weekly value, visits, conversion and the latest changes.',
+            'Orders: a three-column board, search, a detail drawer and CSV export.',
+            'Products: change prices, rename items, mark stock, add or remove products and replace photos.',
+            'Customers: one row per phone number with order count and lifetime value.',
+            'Traffic: visits and orders over fourteen days, plus conversion by page.'
+          ]
+        },
+        {
+          title: 'Search and validation',
+          paragraphs: ['Every page has one canonical address, a description, Open Graph and Twitter tags, and JSON-LD generated from the live business and catalogue data. robots.txt admits crawlers, including GPTBot, ClaudeBot, PerplexityBot and CCBot, and keeps /admin out. Public pages are checked against the W3C HTML validator as part of the release routine.']
+        },
+        {
+          title: 'Traffic and logs',
+          paragraphs: ['One beacon per public page records the path and nothing else. Counts are kept per shop day in West Africa Time, so the evening is not filed under tomorrow. Search engines, preview bots and monitors are dropped. No address, referrer, cookie or browser is stored.']
+        }
+      ],
+      links: [['Live site', 'https://afrahplasticsltd.netlify.app']]
+    },
+
+    nigtan: {
+      title: 'NIGTAN Limited',
+      eyebrow: 'Web Development · Corporate',
+      summary: 'Website coordination for NIGTAN Limited: I supervised and contributed to the company site build and have maintained it since, handling content, structure and updates as they arise.',
+      meta: [
+        ['Role', 'Website Coordinator'],
+        ['Stack', 'WordPress · Elementor · Astra · PHP'],
+        ['Status', 'Maintained since launch'],
+        ['Site', 'nigtan.com']
+      ],
+      langs: [['HTML', 38], ['CSS', 27], ['JavaScript', 20], ['PHP', 15]],
+      overview: 'The company site presents the business profile, services and contact routes in a professional brand presence. My role sits between the company and the build: scoping content and structure, contributing to the implementation, and then keeping the site current after launch.',
+      highlights: [
+        'Coordinated the company website build from content plan to launch',
+        'Contributed to the front-end implementation',
+        'Maintain the live site, handling content and structural updates',
+        'Work directly with the company on changes as they arise'
+      ],
+      readme: [
+        {
+          title: 'Scope',
+          paragraphs: ['A corporate website covering the company profile, its services and the ways a client can make contact. The build was a team effort; my part was coordination plus hands-on contribution.']
+        },
+        {
+          title: 'What I handle',
+          list: [
+            'Content structure and page planning',
+            'Front-end contribution and brand alignment',
+            'Post-launch maintenance and updates',
+            'Direct liaison with the company on changes'
+          ]
+        },
+        {
+          title: 'Stack',
+          paragraphs: ['WordPress with Elementor page building on the Astra theme, Yoast SEO and a WhatsApp contact plugin. Content and layout are managed through Elementor, with custom CSS and small JavaScript touches where the design needs them.']
+        }
+      ],
+      links: [['nigtan.com', 'https://nigtan.com']]
+    },
+
+    yoyos: {
+      title: 'Yoyos Devices Store',
+      eyebrow: 'Fullstack · E-commerce · Analytics',
+      summary: 'The brand’s main storefront: product search, category pages, a slide-out cart, bank transfer and Paystack payment routes, and a phone-confirmed order flow. GA4, Meta Pixel and e-commerce structured data are wired into the order path rather than bolted on afterwards.',
+      meta: [
+        ['Role', 'Fullstack developer'],
+        ['Stack', 'HTML · CSS · JavaScript · Paystack · GA4 · Meta Pixel'],
+        ['Scope', 'Storefront'],
+        ['Status', 'Live']
+      ],
+      langs: [['HTML', 42], ['JavaScript', 31], ['CSS', 27]],
+      overview: 'The storefront carries the full product range, with search, categories and a cart that stays out of the way. Nothing is charged on the site: an order is recorded with a reference, the price and delivery window are confirmed by phone, and it follows through to confirmation.',
+      highlights: [
+        'Product search, category pages and a slide-out cart',
+        'Bank transfer and Paystack as payment routes, with confirmation by phone',
+        'GA4 and Meta Pixel wired to the order flow',
+        'E-commerce structured data for products and offers',
+        'Lead capture that issues an order reference and carries it to confirmation',
+        'Technical SEO: canonicals, sitemap, robots and social previews'
+      ],
+      readme: [
+        {
+          title: 'The store',
+          paragraphs: ['The main storefront at yoyosdevices.com.ng. The five product landing pages are a separate project with their own repositories and deployments.']
+        },
+        {
+          title: 'Order flow',
+          paragraphs: ['A visitor searches or browses a category, builds a basket, then chooses bank transfer or Paystack. The order is recorded with a reference, the price and delivery window are confirmed by phone, and the order follows through to confirmation.']
+        },
+        {
+          title: 'Analytics',
+          paragraphs: ['GA4 and Meta Pixel are wired to the order flow, with events that match each step rather than page views alone. Product and offer structured data describe the same catalogue the customer sees.']
+        }
+      ],
+      links: [['Store', 'https://yoyosdevices.com.ng']]
+    },
+
+    landing: {
+      title: 'Yoyos Product Landing Pages',
+      eyebrow: 'Landing Pages · Analytics · SEO',
+      summary: 'Five single-product pages, each in its own repository and deployment: Air Teaser, MistFan, Pro Series, R11 Handheld Fan and Type 928. Per-product copy, structured data and tracking, so each page can be tuned without dragging the whole store along.',
+      meta: [
+        ['Role', 'Fullstack developer'],
+        ['Stack', 'HTML · CSS · JavaScript · GA4 · Meta Pixel'],
+        ['Scope', '5 single-product pages'],
+        ['Status', 'Live']
+      ],
+      langs: [['HTML', 45], ['JavaScript', 30], ['CSS', 25]],
+      overview: 'Each page is focused on one product, so the copy, the structured data and the tracking can be tuned to that product. They share a brand system but not a codebase, which keeps each deployment small and independent of the storefront.',
+      highlights: [
+        'Five independent static deployments, one per product',
+        'Product-specific copy, imagery and offer structured data',
+        'GA4 and Meta Pixel on every page, attributed per product',
+        'Order capture that issues a reference and hands off to confirmation',
+        'Technical SEO: canonicals, sitemaps, robots and social previews'
+      ],
+      readme: [
+        {
+          title: 'The five pages',
+          list: [
+            'Air Teaser: airteaser.yoyosdevices.com.ng',
+            'MistFan: mistfans.yoyosdevices.com.ng',
+            'Pro Series: proseries.yoyosdevices.com.ng',
+            'R11 Handheld Fan: r11fans.yoyosdevices.com.ng',
+            'Type 928: type928.yoyosdevices.com.ng'
+          ]
+        },
+        {
+          title: 'Why separate',
+          paragraphs: ['A single-product page can argue for one product without the compromises of a full storefront. Each deployment is small enough to iterate on its own, and each carries only the structured data and tracking that product needs.']
+        },
+        {
+          title: 'Analytics and SEO',
+          paragraphs: ['Each deployment has its own GA4 property and Meta Pixel, so traffic and conversions are attributed to the page that earned them rather than pooled into one number. Titles, descriptions, canonicals, Open Graph tags, product JSON-LD and sitemaps are written per page.']
+        }
+      ],
+      links: [
+        ['Air Teaser', 'https://airteaser.yoyosdevices.com.ng'],
+        ['MistFan', 'https://mistfans.yoyosdevices.com.ng'],
+        ['Pro Series', 'https://proseries.yoyosdevices.com.ng'],
+        ['R11 Handheld Fan', 'https://r11fans.yoyosdevices.com.ng'],
+        ['Type 928', 'https://type928.yoyosdevices.com.ng']
+      ]
+    },
+
+    school: {
+      title: 'Secondary School Management Portal',
+      eyebrow: 'Web Development · Systems · Education',
+      summary: 'A complete Django + MySQL school system built across nine phases: role-based dashboards, results entry and approval with automatic grades and positions, fee invoicing and payment tracking, PDF report cards and transcripts, student ID cards, announcements, assignments and audit logging.',
+      meta: [
+        ['Role', 'Full-stack developer'],
+        ['Stack', 'Django · MySQL · Bootstrap · ReportLab'],
+        ['Scope', '9 phases, complete'],
+        ['Code', 'github.com/SirAmran/school-portal']
+      ],
+      langs: [['Python', 50], ['HTML', 24], ['CSS', 12], ['SQL', 8], ['JavaScript', 6]],
+      overview: 'One system, four roles. A single user table distinguishes Super Admin, Teacher, Student and Parent, while role-specific data lives in linked profiles. Every module is scoped to the account that owns it, and blocked attempts are written to an audit log.',
+      highlights: [
+        'Role-based dashboards for admins, teachers, students and parents',
+        'Bulk score entry with automatic totals, grades and class positions',
+        'Approval workflow: draft, submitted, approved, then visible to students and parents',
+        'Fee invoices, payment recording and derived outstanding balances',
+        'PDF report cards, transcripts, class ZIP exports and student ID cards with QR codes',
+        'Assignments, notes, announcements, notifications and a real inbox',
+        'Per-family and per-teacher data isolation enforced in the views',
+        'Audit logging for logins, failed attempts, permission errors and admin actions'
+      ],
+      readme: [
+        {
+          title: 'What is included',
+          list: [
+            'accounts: custom role-based user, teachers, parents, students and password reset tokens',
+            'academics: sessions, terms, classes, subjects, assignments and timetable',
+            'results: results with automatic grade, remark and position, plus class averages',
+            'assignments: assignments, submissions and learning notes',
+            'announcements, finance, student ID cards, audit logs and notifications'
+          ]
+        },
+        {
+          title: 'Results and finance',
+          paragraphs: ['Scores are entered as draft, submitted for approval, and only appear to students and parents once approved. Totals, grades, subject positions and class averages are recalculated from the scores, never typed in. Fees are per student, category, session and term; every balance is derived from real payment rows so the numbers cannot drift.']
+        },
+        {
+          title: 'Reports',
+          list: [
+            'Report card PDF per student and term, with subject results and remarks',
+            'Full transcript across every session and term with approved results',
+            'Class report cards bundled into one ZIP for teachers',
+            'Student ID card PDF with photo and QR code'
+          ]
+        },
+        {
+          title: 'Security and permissions',
+          paragraphs: ['A student can only pull their own report. A parent can only pull a child linked to their account. A teacher can only pull a student in a class they are assigned to. Super Admin can pull anyone. Wrong-owner requests are redirected with an error instead of returning a partial PDF.']
+        },
+        {
+          title: 'Running locally',
+          paragraphs: ['Python 3.11+, MySQL 8, a virtual environment and the environment variables in the README. Migrations then create the full schema, and Django admin can manage every table before the custom dashboards are used.']
+        }
+      ],
+      links: [['View the code', 'https://github.com/SirAmran/school-portal']]
+    },
+
+    bagaja: {
+      title: 'Bagaja Vending: Customer App & Agent Desk',
+      eyebrow: 'Product · PWA · Payments',
+      summary: 'Two apps for a prepaid-electricity vending business: a customer PWA to order by meter, pay by transfer and follow a signed tracking link, and an agent desk that reconciles the payment against the bank, captures the token from Bagaja and records delivery.',
+      meta: [
+        ['Role', 'Fullstack developer'],
+        ['Apps', 'Customer app · Agent desk'],
+        ['Stack', 'Next.js 16 · React 19 · TypeScript · Prisma · Supabase'],
+        ['Status', 'Phases 1–5 built']
+      ],
+      langs: [['TypeScript', 64], ['CSS', 14], ['JavaScript', 10], ['HTML', 5], ['SQL', 5], ['Shell', 2]],
+      overview: 'Two apps on one database. The customer app takes an order by meter, records the transfer and gives a signed tracking link. The agent desk is the other side: it reconciles the transfer against the bank, records the token from Bagaja and records delivery. The design is deliberately narrow: one service area, one meter format, no offline vending, and the bank as the source of truth for payment.',
+      highlights: [
+        'Customer PWA: order by meter, bank transfer and a signed tracking link',
+        'Agent desk for payment reconciliation, token capture, delivery and refunds',
+        'Two buckets, one row per job, a desk bell and Web Push notifications',
+        'Optional Google accounts that only add portable history',
+        'TOTP for the agent, voice notes, order-draft recovery and day-end CSV reports',
+        'CSP with a per-request nonce, redacted telemetry and a narrow service worker',
+        'Money as BigInt kobo, energy as integer Wh, meter numbers as text',
+        'More than twenty domain rules covered by unit tests'
+      ],
+      readme: [
+        {
+          title: 'Stack',
+          list: [
+            'Next.js 16.4 App Router with React Server Components',
+            'React 19.3 and TypeScript 7',
+            'Prisma 7 with the pg adapter',
+            'Supabase Postgres and Storage',
+            'Netlify (OpenNext) and hand-written CSS with design tokens',
+            'node:test for unit tests'
+          ]
+        },
+        {
+          title: 'Product constraints',
+          list: [
+            'One service area. There is no estate field.',
+            'One meter format. Meter numbers are text and keep leading zeros.',
+            'No mandatory registration. Google sign-in is optional.',
+            'Manual bank verification. The bank is the source of truth.',
+            'Tokens are captured from Bagaja, never generated here.',
+            'Push payloads carry no phone, meter, amount, reference or token.'
+          ]
+        },
+        {
+          title: 'Status',
+          paragraphs: ['Phases 1–5 are built: TOTP, voice notes, the WhatsApp message log, order-draft recovery, optional Google accounts, day-end reports, owner-editable settings, an append-only audit log, Web Push with a desk bell, an installable PWA, an offline shell, CSP, redacted error reporting and the operations docs.']
+        }
+      ],
+      links: [['Customer app', 'https://bgjunit.netlify.app']]
+    },
+
+    agent: {
+      title: 'Personal AI Agent Stack',
+      eyebrow: 'Automation · AI · Systems',
+      summary: 'A local agent that boots from my own instruction file and runs the day’s work: voice in and out, an animated status display, a hand-tracked spatial interface, and a markdown memory it reads and writes.',
+      meta: [
+        ['Role', 'Design & build'],
+        ['Stack', 'Python · JavaScript · TypeScript · local models'],
+        ['Interface', 'Voice · gesture · display'],
+        ['Status', 'Personal tool, in use']
+      ],
+      langs: [['Python', 42], ['JavaScript', 24], ['TypeScript', 14], ['Shell', 10], ['HTML', 5], ['CSS', 5]],
+      overview: 'The point of the stack is continuity without a giant context window. A session starts from a compact boot file and a vault index instead of reloading an old conversation. Memory is written as markdown, so it stays readable, diffable and portable between models.',
+      highlights: [
+        'Boots from a compact instruction file instead of replaying a conversation',
+        'Token-efficient memory: a vault index plus written notes',
+        'Voice input and speech output',
+        'Hand-tracked spatial interface and an animated status display',
+        'Standing rules for business handling: evidence before claims, confirmation before code, a written trail for every handover'
+      ],
+      readme: [
+        {
+          title: 'What it is',
+          paragraphs: ['A local agent assembled around the way I actually work. It is not a chatbot wrapper: the instruction file, the memory layout and the interface are all part of the system.']
+        },
+        {
+          title: 'Memory design',
+          list: [
+            'A short boot file holds identity, standing rules and the current priorities.',
+            'A vault index points at the notes that matter for the task at hand.',
+            'Notes are markdown, so they can be read, edited and diffed by hand.',
+            'Sessions write back what changed instead of rebuilding the whole context.'
+          ]
+        },
+        {
+          title: 'Interface',
+          paragraphs: ['Voice in and out for hands-free work, an animated display that shows state at a glance, and a hand-tracked spatial layer for moving between screens without a mouse.']
+        }
+      ],
+      links: []
+    },
+
+    docbrief: {
+      title: 'School Support Services Brief',
+      eyebrow: 'Document Design · Business',
+      summary: 'A polished Word document for a Professional School Support Services business, covering document support, formatting, printing and digital assistance offerings for educational institutions.',
+      meta: [
+        ['Role', 'Document designer'],
+        ['Client', 'Professional School Support Services'],
+        ['Format', 'Microsoft Word · PDF'],
+        ['Status', 'Delivered']
+      ],
+      langLabel: 'Formats',
+      langs: [['Microsoft Word', 75], ['PDF', 25]],
+      overview: 'A business brief has to do two jobs at once: explain the service clearly and look like it belongs in front of a school administrator. The layout, type hierarchy and section order were built around that reader.',
+      highlights: [
+        'Clear service structure for a school-facing audience',
+        'Consistent typography, spacing and heading hierarchy',
+        'Print-ready PDF alongside the editable Word source',
+        'Editable template the business can update itself'
+      ],
+      readme: [
+        {
+          title: 'Brief',
+          paragraphs: ['A Professional School Support Services business needed a document that presents its offerings to educational institutions: document support, formatting, printing and digital assistance.']
+        },
+        {
+          title: 'What was produced',
+          list: [
+            'Cover and introduction',
+            'Service sections with a clear hierarchy',
+            'Contact and next-steps block',
+            'Matching PDF export'
+          ]
+        },
+        {
+          title: 'Formats',
+          paragraphs: ['Delivered as an editable Microsoft Word document with a PDF export for sending. The Word file is the source so the business can update prices and wording without a designer.']
+        }
+      ],
+      links: []
+    }
+  };
+
+  function node(tag, className, text) {
+    var n = document.createElement(tag);
+    if (className) n.className = className;
+    if (text != null) n.textContent = text;
+    return n;
+  }
+
+  function buildLanguages(container, project) {
+    var langs = project.langs || [];
+    if (!langs.length) return;
+
+    var wrap = node('div', 'project-langs');
+
+    var head = node('div', 'lang-head');
+    head.appendChild(node('span', null, project.langLabel || 'Languages'));
+    head.appendChild(node('strong', null, langs[0][0] + ' ' + langs[0][1] + '%'));
+    wrap.appendChild(head);
+
+    var bar = node('div', 'lang-bar');
+    bar.setAttribute('role', 'img');
+    bar.setAttribute('aria-label', (project.langLabel || 'Languages') + ': ' +
+      langs.map(function (l) { return l[0] + ' ' + l[1] + '%'; }).join(', '));
+
+    langs.forEach(function (l) {
+      var seg = document.createElement('i');
+      seg.style.width = l[1] + '%';
+      seg.style.background = COLORS[l[0]] || '#8b949e';
+      seg.title = l[0] + ' ' + l[1] + '%';
+      bar.appendChild(seg);
+    });
+    wrap.appendChild(bar);
+
+    var legend = node('ul', 'lang-legend');
+    langs.forEach(function (l) {
+      var li = document.createElement('li');
+      var dot = node('span', 'lang-dot');
+      dot.style.background = COLORS[l[0]] || '#8b949e';
+      li.appendChild(dot);
+      li.appendChild(document.createTextNode(l[0]));
+      li.appendChild(node('span', 'lang-pct', l[1] + '%'));
+      legend.appendChild(li);
+    });
+    wrap.appendChild(legend);
+
+    container.appendChild(wrap);
+  }
+
+  // ---- Add the bars and More buttons to the static cards ----
+  document.querySelectorAll('.project-card[data-project]').forEach(function (card) {
+    var key = card.getAttribute('data-project');
+    var project = PROJECTS[key];
+    if (!project) return;
+
+    var body = card.querySelector('.project-body');
+    if (!body) return;
+
+    var holder = document.createElement('div');
+    buildLanguages(holder, project);
+    if (holder.firstChild) {
+      var anchor = body.querySelector('.project-links') || body.querySelector('.project-link');
+      if (anchor) body.insertBefore(holder.firstChild, anchor);
+      else body.appendChild(holder.firstChild);
+    }
+
+    var button = node('button', 'project-more');
+    button.type = 'button';
+    button.setAttribute('aria-label', 'See everything about ' + project.title);
+    button.appendChild(node('span', null, 'More'));
+    var arrow = node('span', 'arrow', '→');
+    arrow.setAttribute('aria-hidden', 'true');
+    button.appendChild(arrow);
+    button.addEventListener('click', function () { openProject(key, button); });
+    body.appendChild(button);
+  });
+
+  // ---- Project modal ----
+  var modal = document.getElementById('projectModal');
+  var lastTrigger = null;
+
+  function openProject(key, trigger) {
+    var project = PROJECTS[key];
+    if (!project) return;
+    lastTrigger = trigger || null;
+
+    document.getElementById('pmEyebrow').textContent = project.eyebrow || '';
+    document.getElementById('pmTitle').textContent = project.title;
+    document.getElementById('pmSummary').textContent = project.summary || '';
+
+    var meta = document.getElementById('pmMeta');
+    meta.textContent = '';
+    (project.meta || []).forEach(function (row) {
+      var box = document.createElement('div');
+      box.appendChild(node('span', null, row[0]));
+      box.appendChild(node('strong', null, row[1]));
+      meta.appendChild(box);
+    });
+    meta.style.display = (project.meta && project.meta.length) ? 'grid' : 'none';
+
+    var langHolder = document.getElementById('pmLangs');
+    langHolder.textContent = '';
+    buildLanguages(langHolder, project);
+
+    var body = document.getElementById('pmBody');
+    body.textContent = '';
+
+    if (project.overview) {
+      var overview = node('div', 'pm-section');
+      overview.appendChild(node('h3', null, 'Overview'));
+      overview.appendChild(node('p', null, project.overview));
+      body.appendChild(overview);
+    }
+
+    if (project.highlights && project.highlights.length) {
+      var highlights = node('div', 'pm-section');
+      highlights.appendChild(node('h3', null, 'What it does'));
+      var hList = document.createElement('ul');
+      project.highlights.forEach(function (item) { hList.appendChild(node('li', null, item)); });
+      highlights.appendChild(hList);
+      body.appendChild(highlights);
+    }
+
+    if (project.readme && project.readme.length) {
+      var readme = node('div', 'pm-readme');
+      readme.appendChild(node('div', 'pm-readme-title', 'README'));
+      project.readme.forEach(function (section) {
+        readme.appendChild(node('h3', null, section.title));
+        (section.paragraphs || []).forEach(function (p) {
+          readme.appendChild(node('p', null, p));
+        });
+        if (section.list && section.list.length) {
+          var list = document.createElement('ul');
+          section.list.forEach(function (item) { list.appendChild(node('li', null, item)); });
+          readme.appendChild(list);
+        }
+      });
+      body.appendChild(readme);
+    }
+
+    var links = document.getElementById('pmLinks');
+    links.textContent = '';
+    var projectLinks = project.links || [];
+    projectLinks.forEach(function (link) {
+      var a = document.createElement('a');
+      var href = link[1];
+      a.className = 'project-link';
+      a.href = href;
+      a.textContent = link[0] + (href.charAt(0) === '#' ? ' →' : ' ↗');
+      if (href.charAt(0) !== '#') {
+        a.target = '_blank';
+        a.rel = 'noopener';
+      }
+      links.appendChild(a);
+    });
+    links.style.display = projectLinks.length ? 'flex' : 'none';
+
+    modal.classList.add('active');
+    modal.querySelector('.modal').scrollTop = 0;
+    document.body.style.overflow = 'hidden';
+    document.getElementById('pmClose').focus();
+  }
+
+  function closeProject() {
+    modal.classList.remove('active');
+    document.body.style.overflow = '';
+    if (lastTrigger) lastTrigger.focus();
+  }
+
+  document.getElementById('pmClose').addEventListener('click', closeProject);
+  modal.addEventListener('click', function (e) { if (e.target === modal) closeProject(); });
+  document.addEventListener('keydown', function (e) {
+    if (!modal.classList.contains('active')) return;
+    if (e.key === 'Escape') { closeProject(); return; }
+    if (e.key !== 'Tab') return;
+    // Keep focus inside the dialog while it is open.
+    var focusables = modal.querySelectorAll('a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])');
+    if (!focusables.length) return;
+    var first = focusables[0];
+    var last = focusables[focusables.length - 1];
+    if (e.shiftKey && (document.activeElement === first || !modal.contains(document.activeElement))) {
+      e.preventDefault();
+      last.focus();
+    } else if (!e.shiftKey && (document.activeElement === last || !modal.contains(document.activeElement))) {
+      e.preventDefault();
+      first.focus();
+    }
+  });
+})();
 </script>
 
 </body>
