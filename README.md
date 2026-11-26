@@ -18,7 +18,7 @@ Netlify serves the repo root directly (`publish = "."` in `netlify.toml`).
 | `portfolio-1.html` | The previous version, kept for reference. Not served — Netlify serves `index.html` at the root. |
 | `logo.svg` | Nav logo |
 | `favicon.png` | Favicon and social preview image |
-| `profile.jpg` | Hero profile photo. The hero circle uses `object-fit: contain`, so the whole photograph shows; keep a near-square crop (about 9:10) so the white margins stay even. |
+| `profile-2026.jpg` | Hero profile photo (the enhanced passport). The hero circle uses `object-fit: contain`, so the whole photograph shows; keep a near-square crop (about 9:10) so the white margins stay even. The filename is versioned because Netlify caches images for a year. |
 
 ## Two things to fill in
 
@@ -62,8 +62,7 @@ To change a percentage, edit the `langs` array. Each entry is
 To add a project, add the card with a new `data-project` key, then add a matching
 entry to `PROJECTS`.
 
-The programmatic colours follow GitHub's language colours. Design projects are
-labelled **Tools** or **Formats** instead of **Languages**.
+The programmatic colours follow GitHub's language colours.
 
 The panel closes with the × button, the Escape key, or a click on the dark
 backdrop, and focus returns to the **More** button that opened it. While it is
